@@ -382,7 +382,7 @@
     "topAlbums" : {
       "The Bends" : 1
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "wrapped",
@@ -401,7 +401,7 @@
     "topAlbums" : {
       "OK Computer" : 1
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "wrapped",
@@ -420,7 +420,7 @@
     "topAlbums" : {
       "OK Computer" : 1
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "search",
@@ -457,7 +457,7 @@
       "In Rainbows" : 1,
       "OK Computer" : 1
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "search",
@@ -496,7 +496,7 @@
     "topAlbums" : {
       "The Bends" : 7
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "search",
@@ -537,7 +537,7 @@
       "Pablo Honey" : 6,
       "In Rainbows" : 1
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "search",
@@ -574,8 +574,7 @@
       "Weird Fishes/Arpeggi" : 2
     },
     "topFans" : [ "alice22", "jack29", "david27", "henry26", "emily30" ],
-    "listeners" : 7,
-    "cities" : 7
+    "listeners" : 7
   }
 }, {
   "command" : "wrapped",
@@ -600,7 +599,7 @@
       "In Rainbows" : 5,
       "The Bends" : 1
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "endProgram",

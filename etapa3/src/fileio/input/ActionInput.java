@@ -22,7 +22,7 @@ public final class ActionInput {
     private String date;
     private Integer price;
     private ArrayList<EpisodeInput> episodes;
-
+    private String recommendationType;
 
     public ActionInput() {
 
@@ -180,6 +180,14 @@ public final class ActionInput {
         this.episodes = episodes;
     }
 
+    public String getRecommendationType() {
+        return recommendationType;
+    }
+
+    public void setRecommendationType(final String recommendationType) {
+        this.recommendationType = recommendationType;
+    }
+
     public ActionInput(final ActionInput actions) {
         this.command = actions.command;
         this.username = actions.username;
@@ -200,6 +208,7 @@ public final class ActionInput {
         this.date = actions.date;
         this.price = actions.price;
         this.episodes = actions.episodes;
+        this.recommendationType = actions.recommendationType;
     }
 
 }

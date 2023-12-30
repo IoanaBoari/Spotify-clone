@@ -6,6 +6,8 @@ import globalwaves.actionoutput.RepeatOutput;
 import globalwaves.actionoutput.StatusOutput;
 import globalwaves.player.LoadResults;
 
+import static globalwaves.userstats.Listener.updateListener;
+
 public final class DoRepeat implements Command {
     public DoRepeat() {
 
@@ -40,6 +42,7 @@ public final class DoRepeat implements Command {
         }
         if (newResults != null && newResults.getUsername() != null) {
             Database.getInstance().getLoadResultsArrayList().add(newResults);
+            updateListener(action, newResults);
         }
     }
 }

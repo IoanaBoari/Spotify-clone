@@ -8,6 +8,9 @@ import globalwaves.actionoutput.StatusOutput;
 import globalwaves.player.LoadResults;
 import globalwaves.player.PodcastLoaded;
 import globalwaves.searchbar.SelectResults;
+import globalwaves.userstats.Listener;
+
+import java.util.ArrayList;
 
 public final class DoLoad implements Command {
     public DoLoad() {
@@ -56,6 +59,41 @@ public final class DoLoad implements Command {
         loadResults.getStats().setCurrentTimestamp(action.getTimestamp());
         if (Menu.getLastAction().equals("select")) {
             Database.getInstance().getLoadResultsArrayList().add(loadResults);
+            int aux = 0;
+            for (Listener listener : Database.getInstance().getListeners()) {
+                if (listener.getUsername().equals(action.getUsername())) {
+                    aux = 1;
+                    break;
+                }
+            }
+            if (aux == 0) {
+                Listener newListener = new Listener.Builder(action.getUsername())
+                        .songsloaded(new ArrayList<>())
+                        .episodesloaded(new ArrayList<>())
+                        .build();
+                Database.getInstance().getListeners().add(newListener);
+            }
+            for (Listener listener : Database.getInstance().getListeners()) {
+                if (listener.getUsername().equals(action.getUsername())) {
+                    if (loadResults.getLoadedSong() != null) {
+                        listener.getSongsloaded().add(loadResults.getLoadedSong());
+                    } else if (loadResults.getLoadedPodcast() != null) {
+                        int idx = loadResults.getLoadedPodcast().getCurrentEpisodeIndex();
+                        listener.getEpisodesloaded().add(loadResults.getLoadedPodcast().
+                                getEpisodes().get(idx));
+                    } else if (loadResults.getLoadedPlaylist() != null) {
+                        int idx = loadResults.getLoadedPlaylist().getCurrentSongIndex();
+                        listener.getSongsloaded().add(loadResults.
+                                getLoadedPlaylist().getSongs().get(idx));
+                    } else if (loadResults.getLoadedAlbum() != null) {
+                        int idx = loadResults.getLoadedAlbum().getCurrentSongIndex();
+                        listener.getSongsloaded().add(loadResults.
+                                getLoadedAlbum().getSongs().get(idx));
+
+                    }
+                    break;
+                }
+            }
             Menu.setLastAction(loadResults.getLastCommand());
         }
     }

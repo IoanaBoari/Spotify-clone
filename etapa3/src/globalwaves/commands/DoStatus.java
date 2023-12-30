@@ -6,6 +6,8 @@ import globalwaves.Menu;
 import globalwaves.actionoutput.StatusOutput;
 import globalwaves.player.LoadResults;
 
+import static globalwaves.userstats.Listener.updateListener;
+
 public final class DoStatus implements Command {
     public DoStatus() {
 
@@ -38,6 +40,7 @@ public final class DoStatus implements Command {
         if (statusOutput.getLoadResults().getStats().getRemainedTime() != null
                 && statusOutput.getLoadResults().getStats().getRemainedTime() > 0) {
             Database.getInstance().getLoadResultsArrayList().add(statusOutput.getLoadResults());
+            updateListener(action, statusOutput.getLoadResults());
         }
         Menu.setLastAction("status");
     }

@@ -3854,8 +3854,7 @@
       "Around and Around" : 10
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -6994,8 +6993,7 @@
       "Heroes & Villains" : 12
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -10168,8 +10166,7 @@
       "Love Me Two Times" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -13342,8 +13339,7 @@
       "Backstreets" : 9
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -16499,8 +16495,7 @@
       "Bob Dylan's 115th Dream" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -17354,13 +17349,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 167529,
-  "message" : "Search returned 5 results",
-  "results" : [ "Freedom", "Freedom", "Free", "Free Man in Paris", "Freedom" ]
+  "message" : "Search returned 3 results",
+  "results" : [ "Free", "Free Man in Paris", "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 167529,
-  "message" : "Successfully selected Freedom."
+  "message" : "Successfully selected Free."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -18474,13 +18469,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 177682,
-  "message" : "Search returned 5 results",
-  "results" : [ "Freedom", "Freedom", "Free", "Free Man in Paris", "Freedom" ]
+  "message" : "Search returned 3 results",
+  "results" : [ "Free", "Free Man in Paris", "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 177682,
-  "message" : "Successfully selected Freedom."
+  "message" : "Successfully selected Free."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -18746,13 +18741,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 180665,
-  "message" : "Search returned 5 results",
-  "results" : [ "Freedom", "Freedom", "Free", "Free Man in Paris", "Freedom" ]
+  "message" : "Search returned 3 results",
+  "results" : [ "Free", "Free Man in Paris", "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 180665,
-  "message" : "Successfully selected Freedom."
+  "message" : "Successfully selected Free."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -19662,8 +19657,8 @@
     "topAlbums" : {
       "Parade - Music From the Motion Picture Under the Cherry Moon" : 66,
       "Purple Rain" : 58,
-      "The Very Best of Prince" : 47,
-      "1999" : 44
+      "1999" : 47,
+      "The Very Best of Prince" : 47
     },
     "topSongs" : {
       "God - Love Theme From Purple Rain 12\" Instrumental Version" : 23,
@@ -19673,8 +19668,7 @@
       "Venus de Milo" : 9
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -22847,8 +22841,7 @@
       "Crazy for You" : 7
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -26020,8 +26013,7 @@
       "Say It" : 9
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -26635,13 +26627,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 254210,
-  "message" : "Search returned 3 results",
-  "results" : [ "Bohemian Rhapsody", "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 254210,
-  "message" : "Successfully selected Bohemian Rhapsody."
+  "message" : "Successfully selected Bohemian Rhapsody - Remastered 2011."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -26667,8 +26659,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 254668,
-  "message" : "Search returned 2 results",
-  "results" : [ "We Will Rock You", "We Will Rock You" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "We Will Rock You" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -26939,8 +26931,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 256657,
-  "message" : "Search returned 2 results",
-  "results" : [ "Radio Ga Ga", "Radio Ga Ga" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Radio Ga Ga" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -27467,8 +27459,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 261213,
-  "message" : "Search returned 2 results",
-  "results" : [ "Radio Ga Ga", "Radio Ga Ga" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Radio Ga Ga" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -27579,8 +27571,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 262221,
-  "message" : "Search returned 2 results",
-  "results" : [ "We Will Rock You", "We Will Rock You" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "We Will Rock You" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -28011,13 +28003,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 266665,
-  "message" : "Search returned 3 results",
-  "results" : [ "Bohemian Rhapsody", "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 266665,
-  "message" : "Successfully selected Bohemian Rhapsody."
+  "message" : "Successfully selected Bohemian Rhapsody - Remastered 2011."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -28283,8 +28275,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 268754,
-  "message" : "Search returned 2 results",
-  "results" : [ "Under Pressure", "Under Pressure" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Under Pressure" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -28779,13 +28771,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 273259,
-  "message" : "Search returned 3 results",
-  "results" : [ "Bohemian Rhapsody", "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 273259,
-  "message" : "Successfully selected Bohemian Rhapsody."
+  "message" : "Successfully selected Bohemian Rhapsody - Remastered 2011."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -29003,13 +28995,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 274811,
-  "message" : "Search returned 3 results",
-  "results" : [ "Bohemian Rhapsody", "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Bohemian Rhapsody - Remastered 2011", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 274811,
-  "message" : "Successfully selected Bohemian Rhapsody."
+  "message" : "Successfully selected Bohemian Rhapsody - Remastered 2011."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -29181,22 +29173,20 @@
   "timestamp" : 276281,
   "result" : {
     "topAlbums" : {
-      "Greatest Hits II" : 80,
+      "Greatest Hits II" : 83,
       "The Game (2011 Remaster)" : 72,
-      "A Night At The Opera (2011 Remaster)" : 53,
-      "Greatest Hits" : 32,
-      "A Night at the Opera" : 4
+      "A Night At The Opera (2011 Remaster)" : 57,
+      "Greatest Hits" : 34
     },
     "topSongs" : {
       "Another One Bites The Dust - Remastered 2011" : 14,
       "Crazy Little Thing Called Love - Remastered 2011" : 13,
+      "Bohemian Rhapsody - Remastered 2011" : 12,
       "I Want It All" : 11,
-      "Bohemian Rhapsody - Remastered 2011" : 8,
       "Dragon Attack - Remastered 2011" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -32352,8 +32342,7 @@
       "Can't Buy Me Love - Remastered 2015" : 6
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -35526,8 +35515,7 @@
       "I'm Back" : 6
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -38700,8 +38688,7 @@
       "God Is Love" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -41874,8 +41861,7 @@
       "Conversation" : 7
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -45031,8 +45017,7 @@
       "All at Once" : 11
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -48205,8 +48190,7 @@
       "Pennyroyal Tea" : 10
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -51379,8 +51363,7 @@
       "Walk On" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -51802,13 +51785,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 512097,
-  "message" : "Search returned 2 results",
-  "results" : [ "Swimming Pools (Drank)", "Swim" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Swim" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 512097,
-  "message" : "Successfully selected Swimming Pools (Drank)."
+  "message" : "Successfully selected Swim."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -52394,13 +52377,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 517058,
-  "message" : "Search returned 2 results",
-  "results" : [ "Swimming Pools (Drank)", "Swim" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Swim" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 517058,
-  "message" : "Successfully selected Swimming Pools (Drank)."
+  "message" : "Successfully selected Swim."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -54541,7 +54524,7 @@
   "result" : {
     "topAlbums" : {
       "Celebration (Double Disc Version)" : 112,
-      "Ray of Light" : 45,
+      "Ray of Light" : 47,
       "Confessions on a Dance Floor" : 43,
       "Like a Prayer" : 34
     },
@@ -54553,8 +54536,7 @@
       "Ray of Light" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -55056,8 +55038,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 547218,
-  "message" : "Search returned 3 results",
-  "results" : [ "Freedom", "Freedom", "Freedom" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -55120,8 +55102,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 547821,
-  "message" : "Search returned 3 results",
-  "results" : [ "Freedom", "Freedom", "Freedom" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -55504,8 +55486,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 550676,
-  "message" : "Search returned 3 results",
-  "results" : [ "Freedom", "Freedom", "Freedom" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -56432,8 +56414,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 558546,
-  "message" : "Search returned 3 results",
-  "results" : [ "Freedom", "Freedom", "Freedom" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -56592,8 +56574,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 560082,
-  "message" : "Search returned 3 results",
-  "results" : [ "Freedom", "Freedom", "Freedom" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -56960,8 +56942,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 563219,
-  "message" : "Search returned 3 results",
-  "results" : [ "Freedom", "Freedom", "Freedom" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Freedom" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -57714,7 +57696,7 @@
   "timestamp" : 570066,
   "result" : {
     "topAlbums" : {
-      "Experience Hendrix: The Best of Jimi Hendrix" : 112,
+      "Experience Hendrix: The Best of Jimi Hendrix" : 118,
       "Are You Experienced" : 45,
       "Electric Ladyland" : 45,
       "Are You Experienced?" : 18
@@ -57727,8 +57709,7 @@
       "Love Or Confusion" : 12
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -60901,8 +60882,7 @@
       "Crocodile Rock" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -64058,8 +64038,7 @@
       "America The Beautiful" : 7
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -67215,8 +67194,7 @@
       "Get on the Floor" : 7
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -70389,8 +70367,7 @@
       "Weird Fishes/Arpeggi" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -70508,8 +70485,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 723148,
-  "message" : "Search returned 3 results",
-  "results" : [ "Gimme Shelter", "Gimme Shelter", "Gimme Shelter" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Gimme Shelter", "Gimme Shelter" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -70972,8 +70949,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 727783,
-  "message" : "Search returned 3 results",
-  "results" : [ "Gimme Shelter", "Gimme Shelter", "Gimme Shelter" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Gimme Shelter", "Gimme Shelter" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -71260,8 +71237,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 730716,
-  "message" : "Search returned 3 results",
-  "results" : [ "Gimme Shelter", "Gimme Shelter", "Gimme Shelter" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Gimme Shelter", "Gimme Shelter" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -71788,13 +71765,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 735598,
-  "message" : "Search returned 4 results",
-  "results" : [ "Thinking Out Loud", "Thinking About You", "Thinking About You", "Think" ]
+  "message" : "Search returned 3 results",
+  "results" : [ "Thinking About You", "Thinking About You", "Think" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 735598,
-  "message" : "Successfully selected Thinking Out Loud."
+  "message" : "Successfully selected Thinking About You."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -71948,8 +71925,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 736731,
-  "message" : "Search returned 2 results",
-  "results" : [ "Paint It Black", "Paint It Black" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Paint It Black" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -72780,8 +72757,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 744836,
-  "message" : "Search returned 3 results",
-  "results" : [ "Gimme Shelter", "Gimme Shelter", "Gimme Shelter" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Gimme Shelter", "Gimme Shelter" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -73084,13 +73061,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 747211,
-  "message" : "Search returned 4 results",
-  "results" : [ "Thinking Out Loud", "Thinking About You", "Thinking About You", "Think" ]
+  "message" : "Search returned 3 results",
+  "results" : [ "Thinking About You", "Thinking About You", "Think" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 747211,
-  "message" : "Successfully selected Thinking Out Loud."
+  "message" : "Successfully selected Thinking About You."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -73372,13 +73349,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 750176,
-  "message" : "Search returned 4 results",
-  "results" : [ "Thinking Out Loud", "Thinking About You", "Thinking About You", "Think" ]
+  "message" : "Search returned 3 results",
+  "results" : [ "Thinking About You", "Thinking About You", "Think" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 750176,
-  "message" : "Successfully selected Thinking Out Loud."
+  "message" : "Successfully selected Thinking About You."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -73436,8 +73413,8 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 750828,
-  "message" : "Search returned 3 results",
-  "results" : [ "Gimme Shelter", "Gimme Shelter", "Gimme Shelter" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Gimme Shelter", "Gimme Shelter" ]
 }, {
   "command" : "select",
   "user" : "david27",
@@ -73484,13 +73461,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 751155,
-  "message" : "Search returned 4 results",
-  "results" : [ "Thinking Out Loud", "Thinking About You", "Thinking About You", "Think" ]
+  "message" : "Search returned 3 results",
+  "results" : [ "Thinking About You", "Thinking About You", "Think" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 751155,
-  "message" : "Successfully selected Thinking Out Loud."
+  "message" : "Successfully selected Thinking About You."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -73550,8 +73527,8 @@
   "timestamp" : 751805,
   "result" : {
     "topAlbums" : {
-      "Aftermath" : 58,
-      "Rolled Gold" : 56,
+      "Aftermath" : 57,
+      "Rolled Gold" : 57,
       "Some Girls" : 54,
       "Let It Bleed" : 51
     },
@@ -73563,8 +73540,7 @@
       "Out of Time" : 8
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -73986,13 +73962,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 763956,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 763956,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -74722,13 +74698,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 773931,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 773931,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -75090,13 +75066,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 779843,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 779843,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -75202,13 +75178,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 781601,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 781601,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -75778,13 +75754,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 789660,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 789660,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -75954,13 +75930,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 792229,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 792229,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -76594,13 +76570,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 801219,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 801219,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -76690,13 +76666,13 @@
   "command" : "search",
   "user" : "david27",
   "timestamp" : 802430,
-  "message" : "Search returned 3 results",
-  "results" : [ "Money Trees", "Money Don't Matter 2 Night", "Money" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Money Don't Matter 2 Night", "Money" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 802430,
-  "message" : "Successfully selected Money Trees."
+  "message" : "Successfully selected Money Don't Matter 2 Night."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -76737,8 +76713,7 @@
       "Shine On You Crazy Diamond (Part Two)" : 9
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "search",
@@ -79911,8 +79886,7 @@
       "That Lucky Old Sun (Just Rolls Around Heaven All Day)" : 7
     },
     "topFans" : [ "david27" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "wrapped",
@@ -79921,17 +79895,17 @@
   "result" : {
     "topArtists" : {
       "Eminem" : 255,
-      "Queen" : 251,
+      "Queen" : 252,
       "Rihanna" : 248,
       "The Beatles" : 247,
       "Johnny Cash" : 246
     },
     "topGenres" : {
-      "rock" : 883,
-      "pop" : 732,
-      "classic rock" : 726,
+      "rock" : 872,
+      "classic rock" : 743,
+      "pop" : 721,
       "soul" : 559,
-      "80s" : 297
+      "80s" : 312
     },
     "topSongs" : {
       "Get It Back" : 31,
@@ -79941,13 +79915,13 @@
       "You'll Never Stand Alone" : 20
     },
     "topAlbums" : {
-      "Greatest Hits" : 157,
+      "Greatest Hits" : 159,
       "Pet Sounds" : 122,
+      "Experience Hendrix: The Best of Jimi Hendrix" : 118,
       "Celebration (Double Disc Version)" : 112,
-      "Experience Hendrix: The Best of Jimi Hendrix" : 112,
       "Berry Is On Top" : 111
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "endProgram",
@@ -79976,154 +79950,130 @@
       "ranking" : 4,
       "mostProfitableSong" : "N/A"
     },
-    "Ed Sheeran" : {
+    "Elton John" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 5,
       "mostProfitableSong" : "N/A"
     },
-    "Elton John" : {
+    "Eminem" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 6,
       "mostProfitableSong" : "N/A"
     },
-    "Eminem" : {
+    "Jimi Hendrix" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 7,
       "mostProfitableSong" : "N/A"
     },
-    "Jimi Hendrix" : {
+    "Johnny Cash" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 8,
       "mostProfitableSong" : "N/A"
     },
-    "Johnny Cash" : {
+    "Joni Mitchell" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 9,
       "mostProfitableSong" : "N/A"
     },
-    "Joni Mitchell" : {
+    "Madonna" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 10,
       "mostProfitableSong" : "N/A"
     },
-    "Kendrick Lamar" : {
+    "Marvin Gaye" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 11,
       "mostProfitableSong" : "N/A"
     },
-    "Madonna" : {
+    "Michael Jackson" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 12,
       "mostProfitableSong" : "N/A"
     },
-    "Marvin Gaye" : {
+    "Nirvana" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 13,
       "mostProfitableSong" : "N/A"
     },
-    "Michael Jackson" : {
+    "Pink Floyd" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 14,
       "mostProfitableSong" : "N/A"
     },
-    "Nirvana" : {
+    "Prince" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 15,
       "mostProfitableSong" : "N/A"
     },
-    "Pharrell Williams" : {
+    "Queen" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 16,
       "mostProfitableSong" : "N/A"
     },
-    "Pink Floyd" : {
+    "Radiohead" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 17,
       "mostProfitableSong" : "N/A"
     },
-    "Prince" : {
+    "Ray Charles" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 18,
       "mostProfitableSong" : "N/A"
     },
-    "Queen" : {
+    "Rihanna" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 19,
       "mostProfitableSong" : "N/A"
     },
-    "Queen, David Bowie" : {
+    "The Beach Boys" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 20,
       "mostProfitableSong" : "N/A"
     },
-    "Radiohead" : {
+    "The Beatles" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 21,
       "mostProfitableSong" : "N/A"
     },
-    "Ray Charles" : {
+    "The Doors" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 22,
       "mostProfitableSong" : "N/A"
     },
-    "Rihanna" : {
+    "The Rolling Stones" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 23,
       "mostProfitableSong" : "N/A"
     },
-    "The Beach Boys" : {
+    "U2" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
       "ranking" : 24,
       "mostProfitableSong" : "N/A"
     },
-    "The Beatles" : {
-      "merchRevenue" : 0.0,
-      "songRevenue" : 0.0,
-      "ranking" : 25,
-      "mostProfitableSong" : "N/A"
-    },
-    "The Doors" : {
-      "merchRevenue" : 0.0,
-      "songRevenue" : 0.0,
-      "ranking" : 26,
-      "mostProfitableSong" : "N/A"
-    },
-    "The Rolling Stones" : {
-      "merchRevenue" : 0.0,
-      "songRevenue" : 0.0,
-      "ranking" : 27,
-      "mostProfitableSong" : "N/A"
-    },
-    "U2" : {
-      "merchRevenue" : 0.0,
-      "songRevenue" : 0.0,
-      "ranking" : 28,
-      "mostProfitableSong" : "N/A"
-    },
     "Whitney Houston" : {
       "merchRevenue" : 0.0,
       "songRevenue" : 0.0,
-      "ranking" : 29,
+      "ranking" : 25,
       "mostProfitableSong" : "N/A"
     }
   }

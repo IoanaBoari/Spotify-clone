@@ -6,6 +6,8 @@ import globalwaves.actionoutput.ForwardOutput;
 import globalwaves.admin.UpdateStats;
 import globalwaves.player.LoadResults;
 
+import static globalwaves.userstats.Listener.updateListener;
+
 public final class DoForward implements Command {
     public DoForward() {
 
@@ -38,6 +40,7 @@ public final class DoForward implements Command {
         }
         if (newResults != null && newResults.getUsername() != null) {
             Database.getInstance().getLoadResultsArrayList().add(newResults);
+            updateListener(action, newResults);
         }
     }
 }

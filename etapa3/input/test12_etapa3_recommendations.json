@@ -289,7 +289,7 @@
     "command": "createPlaylist",
     "username": "morningstar",
     "timestamp": 75,
-    "name": "playlist1"
+    "playlistName": "playlist1"
   },
   {
     "command": "addRemoveInPlaylist",

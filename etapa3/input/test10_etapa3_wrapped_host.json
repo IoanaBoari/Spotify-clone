@@ -1,5 +1,29 @@
 [
   {
+    "timestamp": 1,
+    "command": "addUser",
+    "age": 69,
+    "city": "New York",
+    "type": "host",
+    "username": "Jad Abumrad and Robert Krulwich"
+  },
+  {
+    "timestamp": 1,
+    "command": "addUser",
+    "age": 69,
+    "city": "New York",
+    "type": "host",
+    "username": "Joe Rogan"
+  },
+  {
+    "timestamp": 1,
+    "command": "addUser",
+    "age": 69,
+    "city": "New York",
+    "type": "host",
+    "username": "Guy Raz"
+  },
+  {
     "command": "search",
     "username": "alice22",
     "timestamp": 10,
@@ -89,9 +113,9 @@
     "command": "search",
     "username": "alice22",
     "timestamp": 3215,
-    "type": "host",
+    "type": "podcast",
     "filters": {
-      "name": "Sarah"
+      "name": "The New Yorker"
     }
   },
   {
@@ -137,6 +161,7 @@
     "timestamp": 3255,
     "type": "host",
     "filters": {
+      "name": "How I Built This",
       "owner": "Guy Raz"
     }
   },

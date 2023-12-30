@@ -2,6 +2,7 @@ package globalwaves;
 
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import fileio.input.ActionInput;
+import globalwaves.admin.end.EndProgram;
 import globalwaves.commands.*;
 import globalwaves.playlist.SortPlaylists;
 
@@ -70,12 +71,15 @@ public final class Menu {
         Database.getInstance().setLikedSongsUsers(new ArrayList<>());
         Database.getInstance().setFollowedPlaylistsUsers(new ArrayList<>());
         Database.getInstance().setPodcastsLoaded(new ArrayList<>());
+        Database.getInstance().setListeners(new ArrayList<>());
 
         // Execute each action using the Command Pattern
         for (ActionInput action : actions) {
             new SortPlaylists().doSortPlaylist(Database.getInstance().getPublicPlaylists());
-            new Invoker().execute(action);
+            Invoker invoker = new Invoker();
+            invoker.execute(action);
         }
+        new EndProgram().endProgram();
 
         // Clear lists after executing actions to avoid data duplication
         Database.getInstance().getAlbums().clear();
@@ -88,5 +92,6 @@ public final class Menu {
         Database.getInstance().getLikedSongsUsers().clear();
         Database.getInstance().getFollowedPlaylistsUsers().clear();
         Database.getInstance().getPodcastsLoaded().clear();
+        Database.getInstance().getListeners().clear();
     }
 }

@@ -1,4 +1,19 @@
 [ {
+  "command" : "addUser",
+  "user" : "Jad Abumrad and Robert Krulwich",
+  "timestamp" : 1,
+  "message" : "The username Jad Abumrad and Robert Krulwich has been added successfully."
+}, {
+  "command" : "addUser",
+  "user" : "Joe Rogan",
+  "timestamp" : 1,
+  "message" : "The username Joe Rogan has been added successfully."
+}, {
+  "command" : "addUser",
+  "user" : "Guy Raz",
+  "timestamp" : 1,
+  "message" : "The username Guy Raz has been added successfully."
+}, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 10,
@@ -93,18 +108,18 @@
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 3215,
-  "message" : "Search returned 0 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "The New Yorker: Fiction" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 3220,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected The New Yorker: Fiction."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 3225,
-  "message" : "Please select a source before attempting to load."
+  "message" : "Playback loaded successfully."
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -184,10 +199,11 @@
     "topGenres" : { },
     "topSongs" : { },
     "topAlbums" : { },
-    "topPodcasts" : {
+    "topEpisodes" : {
       "The Power of Design" : 2,
       "Elon Musk Returns" : 1,
       "Ghosts" : 1,
+      "Salman Rushdie Reads Gabriel Garcia Marquez" : 1,
       "The Science of Us" : 1
     }
   }
@@ -200,8 +216,7 @@
       "The Power of Design" : 2,
       "The Science of Us" : 1
     },
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "wrapped",
@@ -211,8 +226,7 @@
     "topEpisodes" : {
       "Ghosts" : 1
     },
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "wrapped",
@@ -222,8 +236,7 @@
     "topEpisodes" : {
       "Elon Musk Returns" : 1
     },
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "endProgram",

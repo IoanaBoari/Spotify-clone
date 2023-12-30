@@ -2929,5 +2929,10 @@
     "name": "Fleetwood Mac Album",
     "timestamp": 8078,
     "price": 9600
+  },
+  {
+    "command": "getNotifications",
+    "username": "david27",
+    "timestamp": 8095
   }
 ]

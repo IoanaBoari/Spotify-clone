@@ -4,6 +4,7 @@ import fileio.input.ActionInput;
 import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.actionoutput.SearchOutput;
+import globalwaves.admin.UpdateStats;
 import globalwaves.player.LoadResults;
 import globalwaves.player.PodcastLoaded;
 import globalwaves.playlist.PlaylistsOwner;
@@ -63,6 +64,7 @@ public final class DoSearch implements Command {
                 }
             }
         }
+        new UpdateStats().doUpdateCurrent(action);
         if (!Database.getInstance().getLoadResultsArrayList().isEmpty()) {
             for (LoadResults loadResults : Database.getInstance().getLoadResultsArrayList()) {
                 if (loadResults.getUsername().equals(action.getUsername())) {

@@ -1,9 +1,19 @@
 [ {
+  "command" : "addUser",
+  "user" : "Led Zeppelin",
+  "timestamp" : 1,
+  "message" : "The username Led Zeppelin has been added successfully."
+}, {
+  "command" : "addAlbum",
+  "user" : "Led Zeppelin",
+  "timestamp" : 1,
+  "message" : "Led Zeppelin has added new album successfully."
+}, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 10,
-  "message" : "Search returned 3 results",
-  "results" : [ "Stairway to Heaven", "Start Me Up", "Stargazing" ]
+  "message" : "Search returned 2 results",
+  "results" : [ "Stairway to Heaven", "Stairway To Heaven - Sunset Sound Mix" ]
 }, {
   "command" : "select",
   "user" : "alice22",
@@ -71,7 +81,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 150,
-  "message" : "Liked songs:\n\t[Amsterdam]\n\nFollowed playlists:\n\t[]\n\nSong recommendations:\n\t[Reset Me]\n\nPlaylists recommendations:\n\t[]"
+  "message" : "Liked songs:\n\t[Amsterdam]\n\nFollowed playlists:\n\t[]\n\nSong recommendations:\n\t[I Was Just a Kid]\n\nPlaylists recommendations:\n\t[]"
 }, {
   "command" : "updateRecommendations",
   "user" : "alice22",
@@ -91,7 +101,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 190,
-  "message" : "Liked songs:\n\t[Amsterdam]\n\nFollowed playlists:\n\t[]\n\nSong recommendations:\n\t[Reset Me]\n\nPlaylists recommendations:\n\t[alice22's recommendations]"
+  "message" : "Liked songs:\n\t[Amsterdam]\n\nFollowed playlists:\n\t[]\n\nSong recommendations:\n\t[I Was Just a Kid]\n\nPlaylists recommendations:\n\t[alice22's recommendations]"
 }, {
   "command" : "endProgram",
   "result" : {

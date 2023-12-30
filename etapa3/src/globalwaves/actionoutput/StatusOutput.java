@@ -9,6 +9,8 @@ import globalwaves.Menu;
 import globalwaves.player.LoadResults;
 import globalwaves.player.Stats;
 
+import static globalwaves.userstats.Listener.updateListener;
+
 public final class StatusOutput {
     private LoadResults loadResults = new LoadResults();
 
@@ -99,6 +101,7 @@ public final class StatusOutput {
                         this.loadResults.getStats().setRemainedTime(currentRemainedTime
                                 + this.loadResults.getLoadedSong().getDuration());
                     }
+                    updateListener(action, this.loadResults);
                 }
             } else if (this.loadResults.getLoadedPlaylist() != null) {
                 if (this.loadResults.getStats().getRepeat().equals("Repeat All")) {
@@ -126,10 +129,12 @@ public final class StatusOutput {
                     } else if (this.loadResults.getStats().getRepeat().equals("No Repeat")
                         && currentRemainedTime <= 0) {
                         int idx = this.loadResults.getLoadedPlaylist().getCurrentSongIndex();
+                        updateListener(action, this.loadResults);
                         this.loadResults.getStats().setPaused(false);
                         while (currentRemainedTime <= 0) {
                             if (idx < this.loadResults.getLoadedPlaylist().getSongs().size() - 1) {
                                 this.loadResults.getLoadedPlaylist().playNextSong();
+                                updateListener(action, this.loadResults);
                                 idx = this.loadResults.getLoadedPlaylist().getCurrentSongIndex();
                                 currentRemainedTime += this.loadResults.getLoadedPlaylist().
                                         getSongs().get(idx).getDuration();
@@ -171,10 +176,12 @@ public final class StatusOutput {
                     this.loadResults.getStats().setRemainedTime(currentRemainedTime);
                 } else if (this.loadResults.getStats().getRepeat().equals("No Repeat")) {
                     int idx = this.loadResults.getLoadedAlbum().getCurrentSongIndex();
+                    updateListener(action, this.loadResults);
                     this.loadResults.getStats().setPaused(false);
                     while (currentRemainedTime <= 0) {
                         if (idx < this.loadResults.getLoadedAlbum().getSongs().size() - 1) {
                             this.loadResults.getLoadedAlbum().playNextSong();
+                            updateListener(action, this.loadResults);
                             idx = this.loadResults.getLoadedAlbum().getCurrentSongIndex();
                             currentRemainedTime += this.loadResults.getLoadedAlbum().
                                     getSongs().get(idx).getDuration();
@@ -194,10 +201,12 @@ public final class StatusOutput {
             } else if (this.loadResults.getLoadedPodcast() != null) {
                 if (currentRemainedTime <= 0) {
                     int idx = this.loadResults.getLoadedPodcast().getCurrentEpisodeIndex();
+                    updateListener(action, this.loadResults);
                     this.loadResults.getStats().setPaused(false);
                     while (currentRemainedTime <= 0 && idx < this.loadResults.
                             getLoadedPodcast().getEpisodes().size() - 1) {
                         this.loadResults.getLoadedPodcast().playNextEpisode();
+                        updateListener(action, this.loadResults);
                         idx = this.loadResults.getLoadedPodcast().getCurrentEpisodeIndex();
                         currentRemainedTime = this.loadResults.getLoadedPodcast().getEpisodes().
                                 get(idx).getDuration() + currentRemainedTime;

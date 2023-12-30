@@ -14,6 +14,7 @@ import globalwaves.user.host.AddPodcast;
 import globalwaves.user.host.RemoveAnnouncement;
 import globalwaves.user.host.RemovePodcast;
 import globalwaves.user.normalUser.SwitchConnectionStatus;
+import globalwaves.userstats.Wrapped;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,6 +71,40 @@ public final class Invoker {
             case "showPodcasts" -> execute(new ShowPodcasts(), action);
             case "changePage" -> execute(new ChangePage(), action);
             case "getTop5Artists" -> execute(new GetTop5Artists(), action);
+            case "wrapped" -> execute(new Wrapped(), action);
+            case "buyPremium" -> {
+
+            }
+            case "cancelPremium" -> {
+
+            }
+            case "adBreak" -> {
+
+            }
+            case "subscribe" -> {
+
+            }
+            case "getNotifications" -> {
+
+            }
+            case "buyMerch" -> {
+
+            }
+            case "seeMerch" -> {
+
+            }
+            case "updateRecommendations" -> {
+
+            }
+            case "previousPage" -> {
+
+            }
+            case "loadRecommendations" -> {
+
+            }
+            case "nextPage" -> {
+
+            }
             default -> {
             }
         }

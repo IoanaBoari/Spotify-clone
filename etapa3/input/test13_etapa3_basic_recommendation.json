@@ -1,5 +1,279 @@
 [
   {
+    "timestamp": 1,
+    "command": "addUser",
+    "age": 69,
+    "city": "New York",
+    "type": "artist",
+    "username": "Led Zeppelin"
+  },
+  {
+    "command": "addAlbum",
+    "username": "Led Zeppelin",
+    "timestamp": 1,
+    "name": "Led Zeppelin IV (Deluxe Edition)",
+    "songs": [
+      {
+        "name": "Black Dog",
+        "duration": 294,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Rock and Roll",
+        "duration": 220,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "The Battle of Evermore",
+        "duration": 330,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Stairway to Heaven",
+        "duration": 662,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Misty Mountain Hop",
+        "duration": 279,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Four Sticks",
+        "duration": 69,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Going to California",
+        "duration": 329,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "When the Levee Breaks",
+        "duration": 428,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Black Dog - Basic Track With Guitar Overdubs",
+        "duration": 275,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Rock And Roll - Alternate Mix",
+        "duration": 220,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "The Battle Of Evermore - Mandolin / Guitar Mix From Headley Grange",
+        "duration": 253,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Stairway To Heaven - Sunset Sound Mix",
+        "duration": 484,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Misty Mountain Hop - Alternate Mix",
+        "duration": 285,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Four Sticks - Alternate Mix",
+        "duration": 273,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "Going To California - Mandolin / Guitar Mix",
+        "duration": 214,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      },
+      {
+        "name": "When The Levee Breaks - Alternate UK Mix In Progress",
+        "duration": 429,
+        "album": "Led Zeppelin IV (Deluxe Edition)",
+        "tags": [
+          "70s",
+          "classic rock",
+          "rock",
+          "hard rock",
+          "blues rock"
+        ],
+        "lyrics": "Couldn't find lyrics for this track",
+        "genre": "70s",
+        "releaseYear": 2022,
+        "artist": "Led Zeppelin"
+      }
+    ],
+    "description": "\"Led Zeppelin IV\" is the common, but unofficial name of the untitled fourth album of English rock band Led Zeppelin. It was released on November 8, 1971. It has no official title printed anywhere on the album, but is generally called \"Led Zeppelin IV\" after the band's previous three numbered albums. Atlantic Records catalogs have used the names \"Four Symbols\" and \"The Fourth Album\"; it has also been referred to as Zoso, which the first symbol appears to spell. Led Zeppelin guitarist Jimmy Page frequently refers to the album in interviews as \"the fourth album\" and \"Led Zeppelin IV\", while <a href=\"https://www.last.fm/music/Led+Zeppelin/Led+Zeppelin+IV+(Deluxe+Edition)\">Read more on Last.fm</a>.",
+    "releaseYear": 2022
+  },
+  {
     "command": "search",
     "username": "alice22",
     "timestamp": 10,

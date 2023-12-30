@@ -7,6 +7,8 @@ import globalwaves.player.LoadResults;
 
 import java.util.ArrayList;
 
+import static globalwaves.userstats.Listener.updateListener;
+
 public final class UpdateStats {
     public UpdateStats() {
 
@@ -57,6 +59,7 @@ public final class UpdateStats {
         for (StatusOutput statusOutput : statusOutputs) {
             Database.getInstance().getLoadResultsArrayList().
                     add(new LoadResults(statusOutput.getLoadResults()));
+            updateListener(action, new LoadResults(statusOutput.getLoadResults()));
         }
     }
 }

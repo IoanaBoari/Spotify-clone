@@ -329,7 +329,7 @@
   "command" : "subscribe",
   "user" : "alice22",
   "timestamp" : 357,
-  "message" : "alice22 subscribed to Michael Jackson successfully."
+  "message" : "alice22 unsubscribed from Michael Jackson successfully."
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -542,7 +542,7 @@
   "command" : "addEvent",
   "user" : "Rihanna",
   "timestamp" : 1248,
-  "message" : "Event for Rihanna does not have a valid date."
+  "message" : "Rihanna has added new event successfully."
 }, {
   "command" : "addMerch",
   "user" : "Nothing But Thieves",
@@ -662,7 +662,7 @@
   "command" : "addEvent",
   "user" : "Michael Jackson",
   "timestamp" : 3354,
-  "message" : "Event for Michael Jackson does not have a valid date."
+  "message" : "Michael Jackson has added new event successfully."
 }, {
   "command" : "addMerch",
   "user" : "Madonna",
@@ -679,7 +679,7 @@
   "timestamp" : 3726,
   "notifications" : [ {
     "name" : "New Album",
-    "description" : "New album from Madonna."
+    "description" : "New Album from Madonna."
   }, {
     "name" : "New Merchandise",
     "description" : "New Merchandise from Madonna."
@@ -739,20 +739,23 @@
   "user" : "henry26",
   "timestamp" : 4811,
   "notifications" : [ {
-    "name" : "New Album",
-    "description" : "New album from Bob Dylan."
+    "name" : "New Event",
+    "description" : "New Event from Rihanna."
   }, {
     "name" : "New Album",
-    "description" : "New album from Bob Dylan."
+    "description" : "New Album from Bob Dylan."
+  }, {
+    "name" : "New Album",
+    "description" : "New Album from Bob Dylan."
   }, {
     "name" : "New Merchandise",
     "description" : "New Merchandise from Fleetwood Mac."
   }, {
     "name" : "New Album",
-    "description" : "New album from Bob Dylan."
+    "description" : "New Album from Bob Dylan."
   }, {
     "name" : "New Album",
-    "description" : "New album from Joni Mitchell."
+    "description" : "New Album from Joni Mitchell."
   } ]
 }, {
   "command" : "getNotifications",
@@ -776,7 +779,7 @@
   "command" : "addEvent",
   "user" : "Aretha Franklin",
   "timestamp" : 5924,
-  "message" : "Event for Aretha Franklin does not have a valid date."
+  "message" : "Aretha Franklin has added new event successfully."
 }, {
   "command" : "addMerch",
   "user" : "The Police",
@@ -813,25 +816,25 @@
   "timestamp" : 6546,
   "notifications" : [ {
     "name" : "New Album",
-    "description" : "New album from Bob Dylan."
+    "description" : "New Album from Bob Dylan."
   }, {
     "name" : "New Album",
-    "description" : "New album from Bob Dylan."
+    "description" : "New Album from Bob Dylan."
   }, {
     "name" : "New Album",
-    "description" : "New album from The Doors."
+    "description" : "New Album from The Doors."
   }, {
     "name" : "New Album",
-    "description" : "New album from Eric Clapton."
+    "description" : "New Album from Eric Clapton."
   }, {
     "name" : "New Album",
-    "description" : "New album from Bob Dylan."
+    "description" : "New Album from Bob Dylan."
   }, {
     "name" : "New Merchandise",
     "description" : "New Merchandise from The Doors."
   }, {
     "name" : "New Album",
-    "description" : "New album from Bob Dylan."
+    "description" : "New Album from Bob Dylan."
   } ]
 }, {
   "command" : "getNotifications",
@@ -842,19 +845,22 @@
     "description" : "New Merchandise from Aretha Franklin."
   }, {
     "name" : "New Album",
-    "description" : "New album from Aretha Franklin."
+    "description" : "New Album from Aretha Franklin."
   }, {
     "name" : "New Album",
-    "description" : "New album from Aretha Franklin."
+    "description" : "New Album from Aretha Franklin."
   }, {
     "name" : "New Album",
-    "description" : "New album from James Brown."
+    "description" : "New Album from James Brown."
   }, {
     "name" : "New Album",
-    "description" : "New album from Frank Sinatra."
+    "description" : "New Album from Frank Sinatra."
   }, {
     "name" : "New Merchandise",
     "description" : "New Merchandise from James Brown."
+  }, {
+    "name" : "New Event",
+    "description" : "New Event from Aretha Franklin."
   } ]
 }, {
   "command" : "getNotifications",
@@ -865,7 +871,7 @@
   "command" : "addEvent",
   "user" : "Bob Dylan",
   "timestamp" : 7124,
-  "message" : "Event for Bob Dylan does not have a valid date."
+  "message" : "Bob Dylan has added new event successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "Madonna",
@@ -920,16 +926,16 @@
     "description" : "New Merchandise from Nothing But Thieves."
   }, {
     "name" : "New Album",
-    "description" : "New album from Madonna."
+    "description" : "New Album from Madonna."
   }, {
     "name" : "New Album",
-    "description" : "New album from The Who."
+    "description" : "New Album from The Who."
   }, {
     "name" : "New Merchandise",
     "description" : "New Merchandise from The Police."
   }, {
     "name" : "New Album",
-    "description" : "New album from The Police."
+    "description" : "New Album from The Police."
   }, {
     "name" : "New Merchandise",
     "description" : "New Merchandise from Madonna."
@@ -938,19 +944,19 @@
     "description" : "New Merchandise from Madonna."
   }, {
     "name" : "New Album",
-    "description" : "New album from The Who."
+    "description" : "New Album from The Who."
   }, {
     "name" : "New Album",
-    "description" : "New album from The Who."
+    "description" : "New Album from The Who."
   }, {
     "name" : "New Album",
-    "description" : "New album from Madonna."
+    "description" : "New Album from Madonna."
   }, {
     "name" : "New Album",
-    "description" : "New album from Jay-Z."
+    "description" : "New Album from Jay-Z."
   }, {
     "name" : "New Album",
-    "description" : "New album from Jay-Z."
+    "description" : "New Album from Jay-Z."
   } ]
 }, {
   "command" : "removeAlbum",
@@ -1013,7 +1019,7 @@
   "timestamp" : 8769,
   "notifications" : [ {
     "name" : "New Album",
-    "description" : "New album from Madonna."
+    "description" : "New Album from Madonna."
   } ]
 }, {
   "command" : "addAlbum",
@@ -1029,7 +1035,7 @@
   "command" : "addEvent",
   "user" : "Madonna",
   "timestamp" : 8999,
-  "message" : "Event for Madonna does not have a valid date."
+  "message" : "Madonna has added new event successfully."
 }, {
   "command" : "addAlbum",
   "user" : "Fleetwood Mac",
@@ -1041,10 +1047,13 @@
   "timestamp" : 9133,
   "notifications" : [ {
     "name" : "New Album",
-    "description" : "New album from The Police."
+    "description" : "New Album from The Police."
   }, {
     "name" : "New Album",
-    "description" : "New album from The Police."
+    "description" : "New Album from The Police."
+  }, {
+    "name" : "New Event",
+    "description" : "New Event from Madonna."
   } ]
 }, {
   "command" : "removeAlbum",
@@ -1080,7 +1089,7 @@
   "command" : "addEvent",
   "user" : "Eric Clapton",
   "timestamp" : 9995,
-  "message" : "Event for Eric Clapton does not have a valid date."
+  "message" : "Eric Clapton has added new event successfully."
 }, {
   "command" : "addAlbum",
   "user" : "Bob Dylan",

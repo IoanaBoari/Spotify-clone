@@ -7,6 +7,8 @@ import globalwaves.actionoutput.PlayPauseOutput;
 import globalwaves.actionoutput.StatusOutput;
 import globalwaves.player.LoadResults;
 
+import static globalwaves.userstats.Listener.updateListener;
+
 public final class DoPlayPause implements Command {
     public DoPlayPause() {
 
@@ -51,6 +53,7 @@ public final class DoPlayPause implements Command {
             }
         }
         Database.getInstance().getLoadResultsArrayList().add(newResults);
+        updateListener(action, newResults);
         Menu.setLastAction("PlayPause");
     }
 }

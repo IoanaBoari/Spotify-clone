@@ -281,7 +281,7 @@
   "command" : "subscribe",
   "user" : "david27",
   "timestamp" : 115,
-  "message" : "david27 subscribed to Fleetwood Mac successfully."
+  "message" : "david27 unsubscribed from Fleetwood Mac successfully."
 }, {
   "command" : "search",
   "user" : "david27",
@@ -349,7 +349,7 @@
   "timestamp" : 3629,
   "notifications" : [ {
     "name" : "New Album",
-    "description" : "New album from Chuck Berry."
+    "description" : "New Album from Chuck Berry."
   } ]
 }, {
   "command" : "addAlbum",
@@ -396,6 +396,23 @@
   "user" : "Fleetwood Mac",
   "timestamp" : 8078,
   "message" : "Fleetwood Mac has added new merchandise successfully."
+}, {
+  "command" : "getNotifications",
+  "user" : "david27",
+  "timestamp" : 8095,
+  "notifications" : [ {
+    "name" : "New Album",
+    "description" : "New Album from Chuck Berry."
+  }, {
+    "name" : "New Merchandise",
+    "description" : "New Merchandise from Elton John."
+  }, {
+    "name" : "New Album",
+    "description" : "New Album from David Bowie."
+  }, {
+    "name" : "New Album",
+    "description" : "New Album from David Bowie."
+  } ]
 }, {
   "command" : "endProgram",
   "result" : { }

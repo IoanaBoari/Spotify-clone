@@ -10,6 +10,7 @@ import globalwaves.playlist.PlaylistsOwner;
 import globalwaves.searchbar.SearchResults;
 import globalwaves.searchbar.SelectResults;
 import globalwaves.user.artist.Album;
+import globalwaves.userstats.Listener;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,7 @@ public final class Database {
     private ArrayList<LikedSongs> likedSongsUsers = new ArrayList<>();
     private ArrayList<FollowedPlaylists> followedPlaylistsUsers = new ArrayList<>();
     private ArrayList<PodcastLoaded> podcastsLoaded = new ArrayList<>();
+    private ArrayList<Listener> listeners = new ArrayList<>();
     private static Database instance;
     private Database() {
 
@@ -135,5 +137,13 @@ public final class Database {
 
     public void setPodcastsLoaded(final ArrayList<PodcastLoaded> podcastsLoaded) {
         this.podcastsLoaded = podcastsLoaded;
+    }
+
+    public ArrayList<Listener> getListeners() {
+        return listeners;
+    }
+
+    public void setListeners(final ArrayList<Listener> listeners) {
+        this.listeners = listeners;
     }
 }

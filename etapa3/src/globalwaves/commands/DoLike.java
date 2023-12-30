@@ -8,6 +8,8 @@ import globalwaves.player.Like;
 import globalwaves.player.LikedSongs;
 import globalwaves.player.LoadResults;
 
+import static globalwaves.userstats.Listener.updateListener;
+
 public final class DoLike implements Command {
     public DoLike() {
 
@@ -56,6 +58,7 @@ public final class DoLike implements Command {
         }
         if (newResults != null && newResults.getUsername() != null) {
             Database.getInstance().getLoadResultsArrayList().add(newResults);
+            updateListener(action, newResults);
         }
     }
 }

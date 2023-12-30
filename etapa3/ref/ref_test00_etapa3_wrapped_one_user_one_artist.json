@@ -449,8 +449,7 @@
       "Take It Back" : 2
     },
     "topFans" : [ "alice22" ],
-    "listeners" : 1,
-    "cities" : 1
+    "listeners" : 1
   }
 }, {
   "command" : "wrapped",
@@ -476,7 +475,7 @@
       "The Dark Side of the Moon" : 7,
       "Wish You Were Here" : 4
     },
-    "topPodcasts" : { }
+    "topEpisodes" : { }
   }
 }, {
   "command" : "endProgram",
