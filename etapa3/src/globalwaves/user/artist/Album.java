@@ -29,7 +29,8 @@ public final class Album {
             songs.add(song);
             int find = 0;
             for (SongInput songInput : Database.getInstance().getLibrary().getSongs()) {
-                if (song.getName().equals(songInput.getName())) {
+                if (song.getName().equals(songInput.getName())
+                        && song.getAlbum().equals(songInput.getAlbum())) {
                     find = 1;
                 }
             }

@@ -6,11 +6,8 @@ import fileio.input.ActionInput;
 import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
-import globalwaves.admin.Artist;
 import globalwaves.admin.delete.DeleteAlbum;
 import globalwaves.commands.Command;
-
-import javax.swing.*;
 
 public final class RemoveAlbum implements Command {
     public RemoveAlbum() {

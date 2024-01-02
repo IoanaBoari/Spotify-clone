@@ -1,4 +1,4 @@
-package globalwaves.admin;
+package globalwaves.admin.delete;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -6,7 +6,7 @@ import fileio.input.ActionInput;
 import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
-import globalwaves.admin.delete.DeleteNormalArtistHost;
+import globalwaves.admin.UpdateStats;
 import globalwaves.commands.Command;
 
 public final class DeleteUser implements Command {

@@ -1,4 +1,4 @@
-package globalwaves.admin;
+package globalwaves.user.artist;
 
 import fileio.input.ActionInput;
 import fileio.input.UserInput;

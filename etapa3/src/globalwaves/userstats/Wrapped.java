@@ -6,12 +6,16 @@ import fileio.input.ActionInput;
 import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
+import globalwaves.admin.UpdateStats;
 import globalwaves.commands.Command;
 import globalwaves.user.artist.ArtistWrapped;
+import globalwaves.user.host.HostWrapped;
 import globalwaves.user.normalUser.NormalWrapped;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Wrapped implements Command {
     private final Integer five = 5;
@@ -25,9 +29,35 @@ public class Wrapped implements Command {
 
     /**
      *
+     * @param map
+     * @return
+     * @param <K>
+     * @param <V>
+     */
+    protected static <K extends Comparable<? super K>, V extends Comparable<? super V>>
+    Map<K, V> sortMapByValueThenKey(final Map<K, V> map) {
+        return map.entrySet().stream()
+                .sorted(Map.Entry.<K, V>comparingByValue().reversed()
+                        .thenComparing(Map.Entry.<K, V>comparingByKey()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1, e2) -> e1,
+                        LinkedHashMap::new
+                ));
+    }
+    /**
+     *
      * @param action The action input containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
+        new UpdateStats().doUpdateCurrent(action);
+        String name  = action.getUsername();
+        for (UserInput user : Database.getInstance().getLibrary().getUsers()) {
+            action.setUsername(user.getUsername());
+            new UpdateStats().doUpdateCurrent(action);
+        }
+        action.setUsername(name);
         ObjectMapper objectMapper = new ObjectMapper();
         ObjectNode object = objectMapper.createObjectNode();
         object.put("command", action.getCommand());
@@ -105,6 +135,11 @@ public class Wrapped implements Command {
             case "artist" -> {
                 ArtistWrapped wrapped = new ArtistWrapped();
                 wrapped.doWrapped(currentUser);
+                if (wrapped.getTopSongs().isEmpty()) {
+                    object.put("message", "No data to show for artist "
+                            + currentUser.getUsername() + ".");
+                    break;
+                }
                 ObjectNode albumsNode = objectMapper.createObjectNode();
                 int count = 0;
                 for (Map.Entry<String, Integer> entry : wrapped.getTopAlbums().entrySet()) {
@@ -139,7 +174,25 @@ public class Wrapped implements Command {
                 object.set("result", resultNode);
             }
             case "host" -> {
-
+                HostWrapped wrapped = new HostWrapped();
+                wrapped.doWrapped(currentUser);
+                if (wrapped.getTopEpisodes().isEmpty()) {
+                    object.put("message", "No data to show for host "
+                            + currentUser.getUsername() + ".");
+                    break;
+                }
+                ObjectNode episodesNode = objectMapper.createObjectNode();
+                int count = 0;
+                for (Map.Entry<String, Integer> entry : wrapped.getTopEpisodes().entrySet()) {
+                    if (count == five) {
+                        break;
+                    }
+                    episodesNode.put(entry.getKey(), entry.getValue());
+                    count++;
+                }
+                resultNode.set("topEpisodes", episodesNode);
+                resultNode.put("listeners", wrapped.getListeners());
+                object.set("result", resultNode);
             }
             default -> {
             }

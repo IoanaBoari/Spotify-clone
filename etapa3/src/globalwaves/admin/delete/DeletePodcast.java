@@ -3,7 +3,7 @@ package globalwaves.admin.delete;
 import fileio.input.PodcastInput;
 import fileio.input.UserInput;
 import globalwaves.Database;
-import globalwaves.admin.Host;
+import globalwaves.user.host.Host;
 import globalwaves.player.LoadResults;
 
 public final class DeletePodcast {

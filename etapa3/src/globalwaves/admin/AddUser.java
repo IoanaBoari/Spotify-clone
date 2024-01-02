@@ -7,6 +7,8 @@ import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.commands.Command;
+import globalwaves.user.artist.Artist;
+import globalwaves.user.host.Host;
 
 public final class AddUser implements Command {
     public AddUser() {

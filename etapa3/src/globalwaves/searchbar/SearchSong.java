@@ -46,7 +46,7 @@ public final class SearchSong {
         ArrayList<SongInput> searchedSongs = new ArrayList<SongInput>();
         if (filters.getName() != null) {
             for (SongInput song : Database.getInstance().getLibrary().getSongs()) {
-                if (song.getName().startsWith(filters.getName())) {
+                if (song.getName().toLowerCase().startsWith(filters.getName().toLowerCase())) {
                     searchedSongs.add(song);
                 }
             }

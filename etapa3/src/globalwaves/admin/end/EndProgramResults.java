@@ -54,7 +54,18 @@ public final class EndProgramResults implements Comparable<EndProgramResults> {
         // Comparație în ordine descrescătoare în funcție de suma songRevenue + merchRevenue
         double thisTotalRevenue = this.getSongRevenue() + this.getMerchRevenue();
         double otherTotalRevenue = other.getSongRevenue() + other.getMerchRevenue();
-        return Double.compare(otherTotalRevenue, thisTotalRevenue);
+
+        // Comparare descrescătoare în funcție de totalRevenue
+        int revenueComparison = Double.compare(otherTotalRevenue, thisTotalRevenue);
+
+        // Dacă totalRevenue sunt egale, să se sorteze alfabetic
+        if (revenueComparison == 0) {
+            String thisName = this.getUsername();
+            String otherName = other.getUsername();
+            return thisName.compareTo(otherName);
+        }
+
+        return revenueComparison;
     }
     public EndProgramResults(final String artist) {
     this.username = artist;

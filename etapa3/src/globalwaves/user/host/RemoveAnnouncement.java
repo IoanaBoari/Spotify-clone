@@ -6,7 +6,6 @@ import fileio.input.ActionInput;
 import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
-import globalwaves.admin.Host;
 import globalwaves.commands.Command;
 
 public final class RemoveAnnouncement implements Command {

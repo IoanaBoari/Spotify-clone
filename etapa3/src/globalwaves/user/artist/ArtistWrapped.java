@@ -8,9 +8,7 @@ import globalwaves.userstats.Listener;
 import globalwaves.userstats.Wrapped;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public final class ArtistWrapped extends Wrapped {
     private Map<String, Integer> topAlbums;
@@ -81,16 +79,5 @@ public final class ArtistWrapped extends Wrapped {
     private void updateMap(final Map<String, Integer> map, final String key) {
         map.put(key, map.getOrDefault(key, 0) + 1);
     }
-    private static <K extends Comparable<? super K>, V extends Comparable<? super V>>
-    Map<K, V> sortMapByValueThenKey(final Map<K, V> map) {
-        return map.entrySet().stream()
-                .sorted(Map.Entry.<K, V>comparingByValue().reversed()
-                        .thenComparing(Map.Entry.<K, V>comparingByKey()))
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        Map.Entry::getValue,
-                        (e1, e2) -> e1,
-                        LinkedHashMap::new
-                ));
-    }
+
 }

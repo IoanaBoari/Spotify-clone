@@ -3,7 +3,7 @@ package globalwaves.searchbar;
 import fileio.input.Filters;
 import fileio.input.UserInput;
 import globalwaves.Database;
-import globalwaves.admin.Host;
+import globalwaves.user.host.Host;
 
 import java.util.ArrayList;
 

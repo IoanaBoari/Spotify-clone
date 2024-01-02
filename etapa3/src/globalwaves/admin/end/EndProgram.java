@@ -55,8 +55,8 @@ public final class EndProgram {
         }
         for (EndProgramResults result : endResults) {
             ObjectNode artistNode = objectMapper.createObjectNode();
-            artistNode.put("songRevenue", result.getSongRevenue());
             artistNode.put("merchRevenue", result.getMerchRevenue());
+            artistNode.put("songRevenue", result.getSongRevenue());
             artistNode.put("ranking", result.getRanking());
             artistNode.put("mostProfitableSong", result.getMostProfitableSong());
 

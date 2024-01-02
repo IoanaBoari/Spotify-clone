@@ -2,9 +2,9 @@ package globalwaves.commands;
 
 import fileio.input.ActionInput;
 import globalwaves.admin.AddUser;
-import globalwaves.admin.DeleteUser;
-import globalwaves.admin.ShowAlbums;
-import globalwaves.admin.ShowPodcasts;
+import globalwaves.admin.delete.DeleteUser;
+import globalwaves.userstats.ShowAlbums;
+import globalwaves.userstats.ShowPodcasts;
 import globalwaves.generalstats.*;
 import globalwaves.pagination.ChangePage;
 import globalwaves.pagination.PrintCurrentPage;
@@ -20,7 +20,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Invoker {
-    private List<Command> commands = new ArrayList<>();
+    private List<ActionInput> actions = new ArrayList<>();
+
+
+    public List<ActionInput> getActions() {
+        return actions;
+    }
+
+    public void setActions(final List<ActionInput> actions) {
+        this.actions = actions;
+    }
 
     /**
      * The execute method acts as an invoker, delegating commands to corresponding command objects.
@@ -118,7 +127,7 @@ public final class Invoker {
      * @param action  The action input containing information necessary for executing the command.
      */
     public void execute(final Command command, final ActionInput action) {
-        commands.add(command);
+        actions.add(action);
         command.execute(action);
     }
 }

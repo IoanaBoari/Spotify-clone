@@ -95,8 +95,7 @@ public final class Listener {
                     listener.getSongsloaded().add(loadResults.getLoadedSong());
                 } else if (loadResults.getLoadedPodcast() != null) {
                     int idx = loadResults.getLoadedPodcast().getCurrentEpisodeIndex();
-//                    listener.getEpisodesloaded().add(loadResults.getLoadedPodcast().
-//                            getEpisodes().get(idx));
+
                     if (!listener.getEpisodesloaded().
                             get(listener.getEpisodesloaded().size() - 1).equals(loadResults.
                             getLoadedPodcast().getEpisodes().get(idx))) {
@@ -105,8 +104,6 @@ public final class Listener {
                     }
                 } else if (loadResults.getLoadedPlaylist() != null) {
                     int idx = loadResults.getLoadedPlaylist().getCurrentSongIndex();
-//                    listener.getSongsloaded().add(loadResults.
-//                            getLoadedPlaylist().getSongs().get(idx));
                     if (!listener.getSongsloaded().
                             get(listener.getSongsloaded().size() - 1).equals(loadResults.
                             getLoadedPlaylist().getSongs().get(idx))) {
@@ -115,8 +112,6 @@ public final class Listener {
                     }
                 } else if (loadResults.getLoadedAlbum() != null) {
                     int idx = loadResults.getLoadedAlbum().getCurrentSongIndex();
-//                    listener.getSongsloaded().add(loadResults.
-//                            getLoadedAlbum().getSongs().get(idx));
                     if (!listener.getSongsloaded().
                             get(listener.getSongsloaded().size() - 1).equals(loadResults.
                             getLoadedAlbum().getSongs().get(idx))) {

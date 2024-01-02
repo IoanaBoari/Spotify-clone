@@ -7,9 +7,9 @@ import fileio.input.PodcastInput;
 import fileio.input.SongInput;
 import globalwaves.Database;
 import globalwaves.Menu;
-import globalwaves.admin.Artist;
+import globalwaves.user.artist.Artist;
 import globalwaves.admin.CheckOffline;
-import globalwaves.admin.Host;
+import globalwaves.user.host.Host;
 import globalwaves.playlist.Playlist;
 import globalwaves.playlist.PlaylistsOwner;
 import globalwaves.searchbar.*;
@@ -118,6 +118,8 @@ public final class SearchOutput {
                     if (songNames.size() < five) {
                         songNames.add(songIter.getName());
                         songResults.add(songIter);
+                    } else {
+                        break;
                     }
                 }
                 songObject.put("command", action.getCommand());

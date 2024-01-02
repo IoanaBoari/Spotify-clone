@@ -3,8 +3,8 @@ package globalwaves.searchbar;
 import fileio.input.ActionInput;
 import fileio.input.PodcastInput;
 import fileio.input.SongInput;
-import globalwaves.admin.Artist;
-import globalwaves.admin.Host;
+import globalwaves.user.artist.Artist;
+import globalwaves.user.host.Host;
 import globalwaves.playlist.Playlist;
 import globalwaves.user.artist.Album;
 

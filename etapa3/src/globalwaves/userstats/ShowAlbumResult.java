@@ -1,4 +1,4 @@
-package globalwaves.admin;
+package globalwaves.userstats;
 
 import fileio.input.SongInput;
 import globalwaves.user.artist.Album;

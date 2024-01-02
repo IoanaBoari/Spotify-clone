@@ -1,5 +1,7 @@
 package fileio.input;
 
+import globalwaves.Database;
+
 public final class EpisodeInput {
     private String name;
     private Integer duration;
@@ -31,4 +33,21 @@ public final class EpisodeInput {
     public void setDescription(final String description) {
         this.description = description;
     }
+
+    /**
+     *
+     * @return
+     */
+    public String searchOwner() {
+        for (PodcastInput podcast : Database.getInstance().getLibrary().getPodcasts()) {
+            for (EpisodeInput episode : podcast.getEpisodes()) {
+                if (this.getName() == episode.getName()) {
+                    return podcast.getOwner();
+                }
+            }
+        }
+        return null;
+    }
+
+
 }

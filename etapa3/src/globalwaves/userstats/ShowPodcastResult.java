@@ -1,4 +1,4 @@
-package globalwaves.admin;
+package globalwaves.userstats;
 
 import fileio.input.EpisodeInput;
 import fileio.input.PodcastInput;
