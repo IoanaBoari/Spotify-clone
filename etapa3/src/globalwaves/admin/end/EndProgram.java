@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import fileio.input.SongInput;
 import globalwaves.Database;
 import globalwaves.Menu;
+import globalwaves.user.artist.merch.Merch;
+import globalwaves.user.artist.merch.OwnedMerch;
 import globalwaves.userstats.Listener;
 
 import java.util.ArrayList;
@@ -43,6 +45,26 @@ public final class EndProgram {
                     // Dacă artistul nu există, adăugați-l în endResults
                     if (!artistExists) {
                         endResults.add(new EndProgramResults(song.getArtist()));
+                    }
+                }
+            }
+        }
+        for (OwnedMerch ownedMerch : Database.getInstance().getOwnedMerchArrayList()) {
+            if (!ownedMerch.getOwnedmerchandise().isEmpty()) {
+                for (Merch merch : ownedMerch.getOwnedmerchandise()) {
+                    boolean artistExists = false;
+
+                    // Iterați prin endResults pentru a verifica dacă artistul există deja
+                    for (EndProgramResults endProgramResults : endResults) {
+                        if (merch.getUsername().equals(endProgramResults.getUsername())) {
+                            artistExists = true;
+                            break; // Ieșiți din bucla dacă artistul există deja
+                        }
+                    }
+
+                    // Dacă artistul nu există, adăugați-l în endResults
+                    if (!artistExists) {
+                        endResults.add(new EndProgramResults(merch.getUsername()));
                     }
                 }
             }

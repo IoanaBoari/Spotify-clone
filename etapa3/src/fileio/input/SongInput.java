@@ -12,6 +12,7 @@ public final class SongInput {
     private Integer releaseYear;
     private String artist;
     private Integer likes = 0;
+    private Double revenue = 0.0;
 
     public SongInput(final int nrLikes) {
         this.likes = nrLikes;
@@ -89,5 +90,13 @@ public final class SongInput {
 
     public void setLikes(final Integer likes) {
         this.likes = likes;
+    }
+
+    public Double getRevenue() {
+        return revenue;
+    }
+
+    public void setRevenue(final Double revenue) {
+        this.revenue = revenue;
     }
 }

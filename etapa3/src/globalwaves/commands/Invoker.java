@@ -3,6 +3,14 @@ package globalwaves.commands;
 import fileio.input.ActionInput;
 import globalwaves.admin.AddUser;
 import globalwaves.admin.delete.DeleteUser;
+import globalwaves.monetization.AdBreak;
+import globalwaves.monetization.BuyPremium;
+import globalwaves.monetization.CancelPremium;
+import globalwaves.notification.GetNotifications;
+import globalwaves.notification.Subscribe;
+import globalwaves.user.artist.merch.AddMerch;
+import globalwaves.user.artist.merch.BuyMerch;
+import globalwaves.user.artist.merch.SeeMerch;
 import globalwaves.userstats.ShowAlbums;
 import globalwaves.userstats.ShowPodcasts;
 import globalwaves.generalstats.*;
@@ -81,27 +89,13 @@ public final class Invoker {
             case "changePage" -> execute(new ChangePage(), action);
             case "getTop5Artists" -> execute(new GetTop5Artists(), action);
             case "wrapped" -> execute(new Wrapped(), action);
-            case "buyPremium" -> {
-
-            }
-            case "cancelPremium" -> {
-
-            }
-            case "adBreak" -> {
-
-            }
-            case "subscribe" -> {
-
-            }
-            case "getNotifications" -> {
-
-            }
-            case "buyMerch" -> {
-
-            }
-            case "seeMerch" -> {
-
-            }
+            case "buyPremium" -> execute(new BuyPremium(), action);
+            case "cancelPremium" -> execute(new CancelPremium(), action);
+            case "adBreak" -> execute(new AdBreak(), action);
+            case "subscribe" -> execute(new Subscribe(), action);
+            case "getNotifications" -> execute(new GetNotifications(), action);
+            case "buyMerch" -> execute(new BuyMerch(), action);
+            case "seeMerch" -> execute(new SeeMerch(), action);
             case "updateRecommendations" -> {
 
             }

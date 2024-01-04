@@ -1,8 +1,11 @@
 package globalwaves.admin.delete;
 
+import fileio.input.SongInput;
+import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.player.LoadResults;
 import globalwaves.user.artist.Album;
+import globalwaves.user.artist.Artist;
 
 
 public final class DeleteAlbum {
@@ -33,6 +36,21 @@ public final class DeleteAlbum {
                 }
             }
         }
+        for (SongInput songInput : deleteAlbum.getSongs()) {
+            Database.getInstance().getLibrary().getSongs().remove(songInput);
+        }
+        for (UserInput user : Database.getInstance().getLibrary().getUsers()) {
+            if (user.getType().equals("artist")) {
+                Artist artist = (Artist) user;
+                for (Album album : artist.getAlbums()) {
+                    if (album.getName().equals(deleteAlbum.getName())) {
+                        artist.getAlbums().remove(deleteAlbum);
+                        break;
+                    }
+                }
+            }
+        }
+        Database.getInstance().getAlbums().remove(deleteAlbum);
         return true;
     }
 }

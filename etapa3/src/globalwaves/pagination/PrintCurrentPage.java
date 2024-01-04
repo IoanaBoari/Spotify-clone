@@ -15,7 +15,7 @@ import globalwaves.playlist.Playlist;
 import globalwaves.searchbar.SelectResults;
 import globalwaves.user.artist.Album;
 import globalwaves.user.artist.Event;
-import globalwaves.user.artist.Merch;
+import globalwaves.user.artist.merch.Merch;
 import globalwaves.user.host.Announcement;
 
 import java.util.ArrayList;

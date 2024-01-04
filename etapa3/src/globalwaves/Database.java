@@ -1,6 +1,9 @@
 package globalwaves;
 
 import fileio.input.LibraryInput;
+import fileio.input.UserInput;
+import globalwaves.notification.Notification;
+import globalwaves.notification.UserSubscriptions;
 import globalwaves.player.LikedSongs;
 import globalwaves.player.LoadResults;
 import globalwaves.player.PodcastLoaded;
@@ -10,6 +13,7 @@ import globalwaves.playlist.PlaylistsOwner;
 import globalwaves.searchbar.SearchResults;
 import globalwaves.searchbar.SelectResults;
 import globalwaves.user.artist.Album;
+import globalwaves.user.artist.merch.OwnedMerch;
 import globalwaves.userstats.Listener;
 
 import java.util.ArrayList;
@@ -32,6 +36,11 @@ public final class Database {
     private ArrayList<FollowedPlaylists> followedPlaylistsUsers = new ArrayList<>();
     private ArrayList<PodcastLoaded> podcastsLoaded = new ArrayList<>();
     private ArrayList<Listener> listeners = new ArrayList<>();
+    private ArrayList<UserInput> premiumUsers = new ArrayList<>();
+    private ArrayList<Listener> premiumListeners = new ArrayList<>();
+    private ArrayList<UserSubscriptions> userSubscriptionsArrayList = new ArrayList<>();
+    private ArrayList<Notification> newNotifications = new ArrayList<>();
+    private ArrayList<OwnedMerch> ownedMerchArrayList = new ArrayList<>();
     private static Database instance;
     private Database() {
 
@@ -145,5 +154,46 @@ public final class Database {
 
     public void setListeners(final ArrayList<Listener> listeners) {
         this.listeners = listeners;
+    }
+
+    public ArrayList<UserInput> getPremiumUsers() {
+        return premiumUsers;
+    }
+
+    public void setPremiumUsers(final ArrayList<UserInput> premiumUsers) {
+        this.premiumUsers = premiumUsers;
+    }
+
+    public ArrayList<Listener> getPremiumListeners() {
+        return premiumListeners;
+    }
+
+    public void setPremiumListeners(final ArrayList<Listener> premiumListeners) {
+        this.premiumListeners = premiumListeners;
+    }
+
+    public ArrayList<UserSubscriptions> getUserSubscriptionsArrayList() {
+        return userSubscriptionsArrayList;
+    }
+
+    public void setUserSubscriptionsArrayList(final ArrayList<UserSubscriptions>
+                                                      userSubscriptionsArrayList) {
+        this.userSubscriptionsArrayList = userSubscriptionsArrayList;
+    }
+
+    public ArrayList<Notification> getNewNotifications() {
+        return newNotifications;
+    }
+
+    public void setNewNotifications(final ArrayList<Notification> newNotifications) {
+        this.newNotifications = newNotifications;
+    }
+
+    public ArrayList<OwnedMerch> getOwnedMerchArrayList() {
+        return ownedMerchArrayList;
+    }
+
+    public void setOwnedMerchArrayList(final ArrayList<OwnedMerch> ownedMerchArrayList) {
+        this.ownedMerchArrayList = ownedMerchArrayList;
     }
 }

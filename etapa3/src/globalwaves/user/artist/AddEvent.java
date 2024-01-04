@@ -7,6 +7,8 @@ import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.commands.Command;
+import globalwaves.notification.Notification;
+import globalwaves.notification.UserSubscriptions;
 
 public final class AddEvent implements Command {
     private final Integer february = 2;
@@ -102,6 +104,15 @@ public final class AddEvent implements Command {
                 if (isValidDateFormat(action.getDate()) && isValidDate(action.getDate())) {
                     Event newEvent = new Event(action);
                     artist.getEvents().add(newEvent);
+                    for (UserSubscriptions user : Database.getInstance().
+                            getUserSubscriptionsArrayList()) {
+                        for (Artist artistSubscribed : user.getSubscribedArtists()) {
+                            if (artistSubscribed.getUsername().equals(artist.getUsername())) {
+                                new Notification().addNotificationEvent(user.getUsername(),
+                                        newEvent);
+                            }
+                        }
+                    }
                     object.put("message", action.getUsername()
                             + " has added new event successfully.");
                 } else {

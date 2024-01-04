@@ -1,4 +1,4 @@
-package globalwaves.user.artist;
+package globalwaves.user.artist.merch;
 
 import fileio.input.ActionInput;
 

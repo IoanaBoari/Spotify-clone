@@ -72,6 +72,11 @@ public final class Menu {
         Database.getInstance().setFollowedPlaylistsUsers(new ArrayList<>());
         Database.getInstance().setPodcastsLoaded(new ArrayList<>());
         Database.getInstance().setListeners(new ArrayList<>());
+        Database.getInstance().setPremiumUsers(new ArrayList<>());
+        Database.getInstance().setPremiumListeners(new ArrayList<>());
+        Database.getInstance().setUserSubscriptionsArrayList(new ArrayList<>());
+        Database.getInstance().setNewNotifications(new ArrayList<>());
+        Database.getInstance().setOwnedMerchArrayList(new ArrayList<>());
 
         // Execute each action using the Command Pattern
         for (ActionInput action : actions) {
@@ -93,5 +98,10 @@ public final class Menu {
         Database.getInstance().getFollowedPlaylistsUsers().clear();
         Database.getInstance().getPodcastsLoaded().clear();
         Database.getInstance().getListeners().clear();
+        Database.getInstance().getPremiumUsers().clear();
+        Database.getInstance().getPremiumListeners().clear();
+        Database.getInstance().getUserSubscriptionsArrayList().clear();
+        Database.getInstance().getNewNotifications().clear();
+        Database.getInstance().getOwnedMerchArrayList().clear();
     }
 }

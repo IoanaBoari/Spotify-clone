@@ -8,10 +8,13 @@ import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.commands.Command;
+import globalwaves.notification.Notification;
+import globalwaves.notification.UserSubscriptions;
 
 
 import java.util.HashMap;
 import java.util.Map;
+
 
 public final class AddAlbum implements Command {
     public AddAlbum() {
@@ -71,6 +74,15 @@ public final class AddAlbum implements Command {
                     Album newAlbum = new Album(action);
                     artist.getAlbums().add(newAlbum);
                     Database.getInstance().getAlbums().add(newAlbum);
+                    for (UserSubscriptions user : Database.getInstance().
+                            getUserSubscriptionsArrayList()) {
+                        for (Artist artistSubscribed : user.getSubscribedArtists()) {
+                            if (artistSubscribed.getUsername().equals(artist.getUsername())) {
+                                new Notification().addNotificationAlbum(user.getUsername(),
+                                        newAlbum);
+                            }
+                        }
+                    }
                     object.put("message", action.getUsername()
                             + " has added new album successfully.");
                 }

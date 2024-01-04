@@ -1,4 +1,4 @@
-package globalwaves.user.artist;
+package globalwaves.user.artist.merch;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -7,6 +7,9 @@ import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.commands.Command;
+import globalwaves.notification.Notification;
+import globalwaves.notification.UserSubscriptions;
+import globalwaves.user.artist.Artist;
 
 public final class AddMerch implements Command {
     public AddMerch() {
@@ -58,6 +61,15 @@ public final class AddMerch implements Command {
                 if (action.getPrice() > 0) {
                     Merch newMerch = new Merch(action);
                     artist.getMerch().add(newMerch);
+                    for (UserSubscriptions user : Database.getInstance().
+                            getUserSubscriptionsArrayList()) {
+                        for (Artist artistSubscribed : user.getSubscribedArtists()) {
+                            if (artistSubscribed.getUsername().equals(artist.getUsername())) {
+                                new Notification().addNotificationMerch(user.getUsername(),
+                                        newMerch);
+                            }
+                        }
+                    }
                     object.put("message", action.getUsername()
                             + " has added new merchandise successfully.");
                 } else {

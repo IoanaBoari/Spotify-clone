@@ -1,6 +1,17 @@
 package globalwaves.admin.end;
 
+import fileio.input.SongInput;
+import fileio.input.UserInput;
+import globalwaves.Database;
+import globalwaves.user.artist.Album;
+import globalwaves.user.artist.Artist;
+import globalwaves.user.artist.merch.Merch;
+import globalwaves.user.artist.merch.OwnedMerch;
+import globalwaves.userstats.Listener;
+
 public final class EndProgramResults implements Comparable<EndProgramResults> {
+    private final Double credit = 1000000.0;
+    private final Double round = 100.0;
     private String username;
     private double songRevenue;
     private double merchRevenue;
@@ -80,7 +91,18 @@ public final class EndProgramResults implements Comparable<EndProgramResults> {
      * @return
      */
     public double calculateSongRevenue(final String artist) {
-        return 0;
+        double revenue = 0.0;
+        for (Listener listener : Database.getInstance().getPremiumListeners()) {
+            for (SongInput song : listener.getSongsloaded()) {
+                if (song.getArtist().equals(artist)) {
+                    revenue += (credit / listener.getSongsloaded().size());
+                    song.setRevenue(song.getRevenue()
+                            + (credit / listener.getSongsloaded().size()));
+                }
+            }
+        }
+        revenue = Math.round(revenue * round) / round;
+        return revenue;
     }
 
     /**
@@ -89,7 +111,16 @@ public final class EndProgramResults implements Comparable<EndProgramResults> {
      * @return
      */
     public double calculateMerchRevenue(final String artist) {
-        return 0;
+        double revenue = 0.0;
+        for (OwnedMerch ownedMerch : Database.getInstance().getOwnedMerchArrayList()) {
+            for (Merch merch : ownedMerch.getOwnedmerchandise()) {
+                if (merch.getUsername().equals(artist)) {
+                    revenue += merch.getPrice();
+                }
+            }
+        }
+        revenue = Math.round(revenue * round) / round;
+        return revenue;
     }
 
     /**
@@ -98,6 +129,27 @@ public final class EndProgramResults implements Comparable<EndProgramResults> {
      * @return
      */
     public String calculateMostProfitableSong(final String artist) {
-        return "N/A";
+        SongInput mostProfitableSong = null;
+        UserInput currentuser = null;
+        for (UserInput user : Database.getInstance().getLibrary().getUsers()) {
+            if (user.getUsername().equals(artist)) {
+                currentuser = user;
+                break;
+            }
+        }
+        Artist currentArtist = (Artist) currentuser;
+        for (Album album : currentArtist.getAlbums()) {
+            for (SongInput song : album.getSongs()) {
+                if (song.getRevenue() > 0.0 && (mostProfitableSong == null
+                        || mostProfitableSong.getRevenue() < song.getRevenue())) {
+                    mostProfitableSong = song;
+                }
+            }
+        }
+        if (mostProfitableSong == null) {
+            return "N/A";
+        } else {
+            return mostProfitableSong.getName();
+        }
     }
 }

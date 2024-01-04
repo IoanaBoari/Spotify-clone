@@ -2,9 +2,8 @@ package globalwaves.user.artist;
 
 import fileio.input.ActionInput;
 import fileio.input.UserInput;
-import globalwaves.user.artist.Album;
-import globalwaves.user.artist.Event;
-import globalwaves.user.artist.Merch;
+import globalwaves.user.artist.merch.Merch;
+
 
 import java.util.ArrayList;
 

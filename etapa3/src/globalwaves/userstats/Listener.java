@@ -3,6 +3,7 @@ package globalwaves.userstats;
 import fileio.input.ActionInput;
 import fileio.input.EpisodeInput;
 import fileio.input.SongInput;
+import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.player.LoadResults;
 
@@ -116,6 +117,51 @@ public final class Listener {
                             get(listener.getSongsloaded().size() - 1).equals(loadResults.
                             getLoadedAlbum().getSongs().get(idx))) {
                         listener.getSongsloaded().add(loadResults.
+                                getLoadedAlbum().getSongs().get(idx));
+                    }
+                }
+                break;
+            }
+        }
+        int premium = 0;
+        for (UserInput user : Database.getInstance().getPremiumUsers()) {
+            if (user.getUsername().equals(action.getUsername())) {
+                premium = 1;
+            }
+        }
+        if (premium == 0) {
+            return;
+        }
+        for (Listener premiumListener : Database.getInstance().getPremiumListeners()) {
+            if (premiumListener.getUsername().equals(action.getUsername())) {
+                if (loadResults.getLoadedSong() != null
+                        && !premiumListener.getSongsloaded().get(premiumListener.
+                                getSongsloaded().size() - 1).
+                        equals(loadResults.getLoadedSong())) {
+                    premiumListener.getSongsloaded().add(loadResults.getLoadedSong());
+                } else if (loadResults.getLoadedPodcast() != null) {
+                    int idx = loadResults.getLoadedPodcast().getCurrentEpisodeIndex();
+
+                    if (!premiumListener.getEpisodesloaded().
+                            get(premiumListener.getEpisodesloaded().size() - 1).equals(loadResults.
+                                    getLoadedPodcast().getEpisodes().get(idx))) {
+                        premiumListener.getEpisodesloaded().add(loadResults.getLoadedPodcast().
+                                getEpisodes().get(idx));
+                    }
+                } else if (loadResults.getLoadedPlaylist() != null) {
+                    int idx = loadResults.getLoadedPlaylist().getCurrentSongIndex();
+                    if (!premiumListener.getSongsloaded().
+                            get(premiumListener.getSongsloaded().size() - 1).equals(loadResults.
+                                    getLoadedPlaylist().getSongs().get(idx))) {
+                        premiumListener.getSongsloaded().add(loadResults.
+                                getLoadedPlaylist().getSongs().get(idx));
+                    }
+                } else if (loadResults.getLoadedAlbum() != null) {
+                    int idx = loadResults.getLoadedAlbum().getCurrentSongIndex();
+                    if (!premiumListener.getSongsloaded().
+                            get(premiumListener.getSongsloaded().size() - 1).equals(loadResults.
+                                    getLoadedAlbum().getSongs().get(idx))) {
+                        premiumListener.getSongsloaded().add(loadResults.
                                 getLoadedAlbum().getSongs().get(idx));
                     }
                 }
