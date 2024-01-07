@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import fileio.input.*;
 import globalwaves.Database;
 import globalwaves.Menu;
+import globalwaves.admin.UpdateStats;
+import globalwaves.recommendation.Recommendations;
 import globalwaves.user.artist.Artist;
 import globalwaves.admin.CheckOffline;
 import globalwaves.user.host.Host;
@@ -45,8 +47,11 @@ public final class PrintCurrentPage implements Command {
         if (new CheckOffline().checkOffline(action) == 1) {
             object.put("message", action.getUsername() + " is offline.");
         } else {
+            new UpdateStats().doUpdateCurrent(action);
             ArrayList<String> likedSongsNames = new ArrayList<>();
             ArrayList<String> followedPlaylistsNames = new ArrayList<>();
+            ArrayList<String> songsRecommendations = new ArrayList<>();
+            ArrayList<String> playlistsRecommendations = new ArrayList<>();
             UserInput currentUser = null;
             for (UserInput userInput : Database.getInstance().getLibrary().getUsers()) {
                 if (userInput.getUsername().equals(action.getUsername())) {
@@ -76,6 +81,7 @@ public final class PrintCurrentPage implements Command {
                         break;
                     }
                 }
+
                 if (currentUser.getCurrentPage().equals("Home")) {
                     if (likedSongsCurrent != null) {
                         likedSongsCurrent.getLikedSongs().sort((a, b) ->
@@ -101,8 +107,21 @@ public final class PrintCurrentPage implements Command {
                             }
                         }
                     }
+                    for (Recommendations recommendations : Database.getInstance().
+                            getRecommendations()) {
+                        if (recommendations.getUsername().equals(action.getUsername())) {
+                            for (SongInput song : recommendations.getSongRecommendations()) {
+                                songsRecommendations.add(song.getName());
+                            }
+                            for (Playlist playlist : recommendations.getPlaylistRecommend()) {
+                                playlistsRecommendations.add(playlist.getName());
+                            }
+                        }
+                    }
                     object.put("message", "Liked songs:\n\t" + likedSongsNames
-                            + "\n\nFollowed playlists:\n\t" + followedPlaylistsNames);
+                            + "\n\nFollowed playlists:\n\t" + followedPlaylistsNames
+                            + "\n\nSong recommendations:\n\t" + songsRecommendations
+                            + "\n\nPlaylists recommendations:\n\t" + playlistsRecommendations);
                 } else if (currentUser.getCurrentPage().equals("LikedContent")) {
                     StringBuilder likedSongs = new StringBuilder("[");
                     StringBuilder followedPlaylists = new StringBuilder("[");

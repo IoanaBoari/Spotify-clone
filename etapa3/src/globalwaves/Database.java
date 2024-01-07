@@ -10,6 +10,8 @@ import globalwaves.player.PodcastLoaded;
 import globalwaves.playlist.FollowedPlaylists;
 import globalwaves.playlist.Playlist;
 import globalwaves.playlist.PlaylistsOwner;
+import globalwaves.recommendation.Recommendations;
+import globalwaves.recommendation.UserPages;
 import globalwaves.searchbar.SearchResults;
 import globalwaves.searchbar.SelectResults;
 import globalwaves.user.artist.Album;
@@ -17,6 +19,8 @@ import globalwaves.user.artist.merch.OwnedMerch;
 import globalwaves.userstats.Listener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Singleton database class for storing application library information.
@@ -41,6 +45,10 @@ public final class Database {
     private ArrayList<UserSubscriptions> userSubscriptionsArrayList = new ArrayList<>();
     private ArrayList<Notification> newNotifications = new ArrayList<>();
     private ArrayList<OwnedMerch> ownedMerchArrayList = new ArrayList<>();
+    private ArrayList<Listener> freeListeners = new ArrayList<>();
+    private Map<String, Double> adRevenues = new HashMap<>();
+    private ArrayList<Recommendations> recommendations = new ArrayList<>();
+    private ArrayList<UserPages> allPages = new ArrayList<>();
     private static Database instance;
     private Database() {
 
@@ -195,5 +203,37 @@ public final class Database {
 
     public void setOwnedMerchArrayList(final ArrayList<OwnedMerch> ownedMerchArrayList) {
         this.ownedMerchArrayList = ownedMerchArrayList;
+    }
+
+    public ArrayList<Listener> getFreeListeners() {
+        return freeListeners;
+    }
+
+    public void setFreeListeners(final ArrayList<Listener> freeListeners) {
+        this.freeListeners = freeListeners;
+    }
+
+    public Map<String, Double> getAdRevenues() {
+        return adRevenues;
+    }
+
+    public void setAdRevenues(final Map<String, Double> adRevenues) {
+        this.adRevenues = adRevenues;
+    }
+
+    public ArrayList<Recommendations> getRecommendations() {
+        return recommendations;
+    }
+
+    public void setRecommendations(final ArrayList<Recommendations> recommendations) {
+        this.recommendations = recommendations;
+    }
+
+    public ArrayList<UserPages> getAllPages() {
+        return allPages;
+    }
+
+    public void setAllPages(final ArrayList<UserPages> allPages) {
+        this.allPages = allPages;
     }
 }

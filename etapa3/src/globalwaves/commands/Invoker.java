@@ -8,6 +8,10 @@ import globalwaves.monetization.BuyPremium;
 import globalwaves.monetization.CancelPremium;
 import globalwaves.notification.GetNotifications;
 import globalwaves.notification.Subscribe;
+import globalwaves.pagination.NextPage;
+import globalwaves.pagination.PreviousPage;
+import globalwaves.recommendation.LoadRecommendations;
+import globalwaves.recommendation.UpdateRecommendations;
 import globalwaves.user.artist.merch.AddMerch;
 import globalwaves.user.artist.merch.BuyMerch;
 import globalwaves.user.artist.merch.SeeMerch;
@@ -96,18 +100,10 @@ public final class Invoker {
             case "getNotifications" -> execute(new GetNotifications(), action);
             case "buyMerch" -> execute(new BuyMerch(), action);
             case "seeMerch" -> execute(new SeeMerch(), action);
-            case "updateRecommendations" -> {
-
-            }
-            case "previousPage" -> {
-
-            }
-            case "loadRecommendations" -> {
-
-            }
-            case "nextPage" -> {
-
-            }
+            case "updateRecommendations" -> execute(new UpdateRecommendations(), action);
+            case "previousPage" -> execute(new PreviousPage(), action);
+            case "loadRecommendations" -> execute(new LoadRecommendations(), action);
+            case "nextPage" -> execute(new NextPage(), action);
             default -> {
             }
         }

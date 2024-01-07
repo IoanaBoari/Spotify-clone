@@ -2,12 +2,15 @@ package globalwaves;
 
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import fileio.input.ActionInput;
+import fileio.input.UserInput;
 import globalwaves.admin.end.EndProgram;
 import globalwaves.commands.*;
 import globalwaves.playlist.SortPlaylists;
-
+import globalwaves.recommendation.Recommendations;
+import globalwaves.recommendation.UserPages;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -77,7 +80,17 @@ public final class Menu {
         Database.getInstance().setUserSubscriptionsArrayList(new ArrayList<>());
         Database.getInstance().setNewNotifications(new ArrayList<>());
         Database.getInstance().setOwnedMerchArrayList(new ArrayList<>());
+        Database.getInstance().setFreeListeners(new ArrayList<>());
+        Database.getInstance().setAdRevenues(new HashMap<>());
+        Database.getInstance().setRecommendations(new ArrayList<>());
+        Database.getInstance().setAllPages(new ArrayList<>());
 
+        for (UserInput user : Database.getInstance().getLibrary().getUsers()) {
+            Recommendations newRecommendations = new Recommendations(user.getUsername());
+            Database.getInstance().getRecommendations().add(newRecommendations);
+            UserPages newPage = new UserPages(user.getUsername());
+            Database.getInstance().getAllPages().add(newPage);
+        }
         // Execute each action using the Command Pattern
         for (ActionInput action : actions) {
             new SortPlaylists().doSortPlaylist(Database.getInstance().getPublicPlaylists());
@@ -103,5 +116,9 @@ public final class Menu {
         Database.getInstance().getUserSubscriptionsArrayList().clear();
         Database.getInstance().getNewNotifications().clear();
         Database.getInstance().getOwnedMerchArrayList().clear();
+        Database.getInstance().getFreeListeners().clear();
+        Database.getInstance().getAdRevenues().clear();
+        Database.getInstance().getRecommendations().clear();
+        Database.getInstance().getAllPages().clear();
     }
 }

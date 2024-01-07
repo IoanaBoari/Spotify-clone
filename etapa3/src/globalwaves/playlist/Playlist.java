@@ -18,6 +18,19 @@ public final class Playlist {
     private Integer currentEpisodeIndex;
     private Integer createTimestamp;
 
+    public Playlist(final String owner, final String name, final Integer createTimestamp) {
+        this.owner = owner;
+        this.name = name;
+        this.createTimestamp = createTimestamp;
+        this.songs = new ArrayList<SongInput>();
+        this.initialOrder = new ArrayList<SongInput>();
+        this.episodes = new ArrayList<EpisodeInput>();
+        this.visibility = "public";
+        this.followers = 0;
+        this.currentSongIndex = 0;
+        this.currentEpisodeIndex = 0;
+    }
+
     public Playlist(final ActionInput action) {
         this.songs = new ArrayList<SongInput>();
         this.initialOrder = new ArrayList<SongInput>();

@@ -7,6 +7,8 @@ import fileio.input.UserInput;
 import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.commands.Command;
+import globalwaves.recommendation.Recommendations;
+import globalwaves.recommendation.UserPages;
 import globalwaves.user.artist.Artist;
 import globalwaves.user.host.Host;
 
@@ -39,12 +41,24 @@ public final class AddUser implements Command {
             if (action.getType().equals("user")) {
                 UserInput newUser = new UserInput(action);
                 Database.getInstance().getLibrary().getUsers().add(newUser);
+                Recommendations newRecommendations = new Recommendations(newUser.getUsername());
+                Database.getInstance().getRecommendations().add(newRecommendations);
+                UserPages newPage = new UserPages(newUser.getUsername());
+                Database.getInstance().getAllPages().add(newPage);
             } else if (action.getType().equals("artist")) {
                 Artist newArtist = new Artist(action);
                 Database.getInstance().getLibrary().getUsers().add(newArtist);
+                Recommendations newRecommendations = new Recommendations(newArtist.getUsername());
+                Database.getInstance().getRecommendations().add(newRecommendations);
+                UserPages newPage = new UserPages(newArtist.getUsername());
+                Database.getInstance().getAllPages().add(newPage);
             } else if (action.getType().equals("host")) {
                 Host newHost = new Host(action);
                 Database.getInstance().getLibrary().getUsers().add(newHost);
+                Recommendations newRecommendations = new Recommendations(newHost.getUsername());
+                Database.getInstance().getRecommendations().add(newRecommendations);
+                UserPages newPage = new UserPages(newHost.getUsername());
+                Database.getInstance().getAllPages().add(newPage);
             }
             object.put("message", "The username " + action.getUsername()
                     + " has been added successfully.");

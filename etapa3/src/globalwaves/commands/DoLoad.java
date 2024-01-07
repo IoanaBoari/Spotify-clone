@@ -6,6 +6,7 @@ import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.actionoutput.LoadOutput;
 import globalwaves.actionoutput.StatusOutput;
+import globalwaves.admin.UpdateStats;
 import globalwaves.player.LoadResults;
 import globalwaves.player.PodcastLoaded;
 import globalwaves.searchbar.SelectResults;
@@ -28,6 +29,7 @@ public final class DoLoad implements Command {
      *                                about the user's request.
      */
     public void execute(final ActionInput action) {
+        new UpdateStats().doUpdateCurrent(action);
         LoadOutput loadOutput = null;
         for (SelectResults results : Database.getInstance().getSelectResultsArrayList()) {
             if (results.getUsername().equals(action.getUsername())) {
@@ -102,6 +104,41 @@ public final class DoLoad implements Command {
                 }
             }
             if (premium == 0) {
+                int aux1 = 0;
+                for (Listener listener : Database.getInstance().getFreeListeners()) {
+                    if (listener.getUsername().equals(action.getUsername())) {
+                        aux1 = 1;
+                        break;
+                    }
+                }
+                if (aux1 == 0) {
+                    Listener newListener = new Listener.Builder(action.getUsername())
+                            .songsloaded(new ArrayList<>())
+                            .episodesloaded(new ArrayList<>())
+                            .build();
+                    Database.getInstance().getFreeListeners().add(newListener);
+                }
+                for (Listener freeListener : Database.getInstance().getFreeListeners()) {
+                    if (freeListener.getUsername().equals(action.getUsername())) {
+                        if (loadResults.getLoadedSong() != null) {
+                            freeListener.getSongsloaded().add(loadResults.getLoadedSong());
+                        } else if (loadResults.getLoadedPodcast() != null) {
+                            int idx = loadResults.getLoadedPodcast().getCurrentEpisodeIndex();
+                            freeListener.getEpisodesloaded().add(loadResults.getLoadedPodcast().
+                                    getEpisodes().get(idx));
+                        } else if (loadResults.getLoadedPlaylist() != null) {
+                            int idx = loadResults.getLoadedPlaylist().getCurrentSongIndex();
+                            freeListener.getSongsloaded().add(loadResults.
+                                    getLoadedPlaylist().getSongs().get(idx));
+                        } else if (loadResults.getLoadedAlbum() != null) {
+                            int idx = loadResults.getLoadedAlbum().getCurrentSongIndex();
+                            freeListener.getSongsloaded().add(loadResults.
+                                    getLoadedAlbum().getSongs().get(idx));
+
+                        }
+                        break;
+                    }
+                }
                 Menu.setLastAction(loadResults.getLastCommand());
                 return;
             }

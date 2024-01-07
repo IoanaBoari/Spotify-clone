@@ -101,6 +101,10 @@ public final class EndProgramResults implements Comparable<EndProgramResults> {
                 }
             }
         }
+        if (Database.getInstance().getAdRevenues().containsKey(artist)) {
+            double currentRevenue = Database.getInstance().getAdRevenues().get(artist);
+            revenue += currentRevenue;
+        }
         revenue = Math.round(revenue * round) / round;
         return revenue;
     }
