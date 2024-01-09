@@ -13,8 +13,12 @@ public final class CancelPremium implements Command {
     }
 
     /**
+     * Cancels the premium subscription for a user.
+     * If the user exists and is a premium subscriber,
+     * the subscription is canceled, and a success message is generated.
+     * Otherwise, a message indicating the absence of a premium subscription is provided.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

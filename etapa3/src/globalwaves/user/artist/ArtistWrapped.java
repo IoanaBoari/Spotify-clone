@@ -56,8 +56,9 @@ public final class ArtistWrapped extends Wrapped {
     }
 
     /**
+     * Updates the top songs, top albums, and top fans based on the songs loaded by the given user.
      *
-     * @param currentUser
+     * @param currentUser The user for whom the statistics are updated.
      */
     public void doWrapped(final UserInput currentUser) {
         for (Listener listener : Database.getInstance().getListeners()) {

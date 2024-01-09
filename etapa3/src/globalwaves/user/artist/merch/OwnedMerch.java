@@ -15,9 +15,10 @@ public final class OwnedMerch {
     }
 
     /**
+     * Adds merchandise to the list of owned merchandise for a user.
      *
-     * @param username
-     * @param merch
+     * @param username The username of the user.
+     * @param merch The merchandise to be added.
      */
     public void addMerchandise(final String username, final Merch merch) {
         boolean found = false;

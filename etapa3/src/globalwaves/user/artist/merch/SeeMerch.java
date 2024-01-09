@@ -15,8 +15,9 @@ public final class SeeMerch implements Command {
     }
 
     /**
+     * Executes the command to retrieve and display a user's owned merchandise names.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

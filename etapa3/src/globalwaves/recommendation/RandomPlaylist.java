@@ -10,9 +10,12 @@ public final class RandomPlaylist {
     }
 
     /**
+     * Updates playlist recommendations for a user based on the specified action.
+     * Creates a new playlist and adds it to the user's playlists,
+     * public playlists, and updates recommendations.
      *
-     * @param action
-     * @return
+     * @param action The ActionInput containing information necessary for updating recommendations.
+     * @return true if recommendations are successfully updated, false otherwise.
      */
     public boolean updateRecommendations(final ActionInput action) {
         action.setPlaylistName(action.getUsername() + "'s recommendations");

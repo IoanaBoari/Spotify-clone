@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import fileio.input.ActionInput;
 import fileio.input.PodcastInput;
 import fileio.input.SongInput;
-import globalwaves.Database;
 import globalwaves.Menu;
 import globalwaves.user.artist.Artist;
 import globalwaves.admin.CheckOffline;
@@ -151,8 +150,7 @@ public final class SearchOutput {
             case "playlist" -> {
                 SearchPlaylist searchPlaylist = new SearchPlaylist();
                 ArrayList<Playlist> playlistsSearched
-                        = searchPlaylist.doSearch(action.getFilters(),
-                        Database.getInstance().getPublicPlaylists(), owner);
+                        = searchPlaylist.doSearch(action.getFilters(), owner);
                 ArrayList<String> playlistNames = new ArrayList<>();
                 ObjectNode playlistObject = objectMapper.createObjectNode();
                 for (Playlist playlist : playlistsSearched) {

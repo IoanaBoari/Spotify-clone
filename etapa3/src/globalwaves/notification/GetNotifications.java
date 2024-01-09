@@ -18,8 +18,12 @@ public final class GetNotifications implements Command {
     }
 
     /**
+     * Processes a user's request to view new notifications.
+     * Generates notification messages for new albums, merchandise, and events, if any,
+     * and adds them to the user's notification list.
+     * Clears the user's new notifications after processing.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

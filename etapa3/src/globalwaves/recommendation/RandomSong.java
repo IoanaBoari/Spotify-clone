@@ -15,9 +15,10 @@ public final class RandomSong {
     }
 
     /**
+     * Updates song recommendations for a user based on the specified action.
      *
-     * @param action
-     * @return
+     * @param action The ActionInput containing information necessary for updating recommendations.
+     * @return true if recommendations are successfully updated, false otherwise.
      */
     public boolean updateRecommendations(final ActionInput action) {
         for (LoadResults loadResults : Database.getInstance().getLoadResultsArrayList()) {

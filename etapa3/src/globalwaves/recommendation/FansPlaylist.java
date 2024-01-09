@@ -11,9 +11,10 @@ public final class FansPlaylist {
     }
 
     /**
+     * Updates user recommendations based on the artist of the last loaded content.
      *
-     * @param action
-     * @return
+     * @param action The ActionInput containing information necessary for executing the command.
+     * @return True if the update was successful, false otherwise.
      */
     public boolean updateRecommendations(final ActionInput action) {
         String artistName = new String();

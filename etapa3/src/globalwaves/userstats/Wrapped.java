@@ -20,19 +20,23 @@ import java.util.stream.Collectors;
 public class Wrapped implements Command {
     private final Integer five = 5;
     /**
+     * Performs a wrapped operation specific to the class that extends this one,
+     * using the provided UserInput.
+     * This method is meant to be implemented by subclasses to define custom behavior.
      *
-     * @param currentUser
+     * @param currentUser The UserInput object representing the current user.
      */
     public void doWrapped(final UserInput currentUser) {
 
     }
 
     /**
+     * Sorts a Map by values in descending order, and then by keys in natural order.
      *
-     * @param map
-     * @return
-     * @param <K>
-     * @param <V>
+     * @param map The Map to be sorted.
+     * @param <K> The type of keys in the Map, extending Comparable.
+     * @param <V> The type of values in the Map, extending Comparable.
+     * @return A new Map sorted by values in descending order, and then by keys in natural order.
      */
     protected static <K extends Comparable<? super K>, V extends Comparable<? super V>>
     Map<K, V> sortMapByValueThenKey(final Map<K, V> map) {
@@ -47,6 +51,7 @@ public class Wrapped implements Command {
                 ));
     }
     /**
+     * Executes the command specified in the given action input and provides a response.
      *
      * @param action The action input containing information necessary for executing the command.
      */
@@ -71,18 +76,22 @@ public class Wrapped implements Command {
                 break;
             }
         }
+        WrappedFactory.WrappedType wrappedType = WrappedFactory.WrappedType.
+                valueOf(currentUser.getType());
+        Wrapped wrapped = WrappedFactory.createWrapped(wrappedType);
+        wrapped.doWrapped(currentUser);
         switch (currentUser.getType()) {
             case "user" -> {
-                NormalWrapped wrapped = new NormalWrapped();
-                wrapped.doWrapped(currentUser);
-                if (wrapped.getTopSongs().isEmpty() && wrapped.getTopEpisodes().isEmpty()) {
+                if (((NormalWrapped) wrapped).getTopSongs().isEmpty()
+                        && ((NormalWrapped) wrapped).getTopEpisodes().isEmpty()) {
                     object.put("message", "No data to show for user "
                             + currentUser.getUsername() + ".");
                     break;
                 }
                 ObjectNode artistsNode = objectMapper.createObjectNode();
                 int count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopArtists().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((NormalWrapped) wrapped).
+                        getTopArtists().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -92,7 +101,8 @@ public class Wrapped implements Command {
                 resultNode.set("topArtists", artistsNode);
                 ObjectNode genresNode = objectMapper.createObjectNode();
                 count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopGenres().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((NormalWrapped) wrapped).
+                        getTopGenres().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -102,7 +112,8 @@ public class Wrapped implements Command {
                 resultNode.set("topGenres", genresNode);
                 ObjectNode songsNode = objectMapper.createObjectNode();
                 count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopSongs().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((NormalWrapped) wrapped).
+                        getTopSongs().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -112,7 +123,8 @@ public class Wrapped implements Command {
                 resultNode.set("topSongs", songsNode);
                 ObjectNode albumsNode = objectMapper.createObjectNode();
                 count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopAlbums().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((NormalWrapped) wrapped).
+                        getTopAlbums().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -122,7 +134,8 @@ public class Wrapped implements Command {
                 resultNode.set("topAlbums", albumsNode);
                 ObjectNode episodesNode = objectMapper.createObjectNode();
                 count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopEpisodes().entrySet()) {
+                for (Map.Entry<String, Integer> entry :((NormalWrapped) wrapped).
+                        getTopEpisodes().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -133,16 +146,15 @@ public class Wrapped implements Command {
                 object.set("result", resultNode);
             }
             case "artist" -> {
-                ArtistWrapped wrapped = new ArtistWrapped();
-                wrapped.doWrapped(currentUser);
-                if (wrapped.getTopSongs().isEmpty()) {
+                if (((ArtistWrapped) wrapped).getTopSongs().isEmpty()) {
                     object.put("message", "No data to show for artist "
                             + currentUser.getUsername() + ".");
                     break;
                 }
                 ObjectNode albumsNode = objectMapper.createObjectNode();
                 int count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopAlbums().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((ArtistWrapped) wrapped).
+                        getTopAlbums().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -152,7 +164,8 @@ public class Wrapped implements Command {
                 resultNode.set("topAlbums", albumsNode);
                 ObjectNode songsNode = objectMapper.createObjectNode();
                 count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopSongs().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((ArtistWrapped) wrapped).
+                        getTopSongs().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -162,7 +175,8 @@ public class Wrapped implements Command {
                 resultNode.set("topSongs", songsNode);
                 ArrayList<String> fansNames = new ArrayList<>();
                 count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopFans().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((ArtistWrapped) wrapped).
+                        getTopFans().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -170,20 +184,19 @@ public class Wrapped implements Command {
                     count++;
                 }
                 resultNode.put("topFans",  objectMapper.valueToTree(fansNames));
-                resultNode.put("listeners", wrapped.getListeners());
+                resultNode.put("listeners", ((ArtistWrapped) wrapped).getListeners());
                 object.set("result", resultNode);
             }
             case "host" -> {
-                HostWrapped wrapped = new HostWrapped();
-                wrapped.doWrapped(currentUser);
-                if (wrapped.getTopEpisodes().isEmpty()) {
+                if (((HostWrapped) wrapped).getTopEpisodes().isEmpty()) {
                     object.put("message", "No data to show for host "
                             + currentUser.getUsername() + ".");
                     break;
                 }
                 ObjectNode episodesNode = objectMapper.createObjectNode();
                 int count = 0;
-                for (Map.Entry<String, Integer> entry : wrapped.getTopEpisodes().entrySet()) {
+                for (Map.Entry<String, Integer> entry : ((HostWrapped) wrapped).
+                        getTopEpisodes().entrySet()) {
                     if (count == five) {
                         break;
                     }
@@ -191,7 +204,7 @@ public class Wrapped implements Command {
                     count++;
                 }
                 resultNode.set("topEpisodes", episodesNode);
-                resultNode.put("listeners", wrapped.getListeners());
+                resultNode.put("listeners", ((HostWrapped) wrapped).getListeners());
                 object.set("result", resultNode);
             }
             default -> {

@@ -19,8 +19,9 @@ public final class AdBreak implements Command {
     }
 
     /**
+     * Executes the specified action, updating user statistics and handling ad revenue insertion.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -44,22 +45,8 @@ public final class AdBreak implements Command {
                         && (loadResults.getLoadedSong() != null
                         || loadResults.getLoadedPlaylist() != null
                         || loadResults.getLoadedAlbum() != null)) {
-                    boolean premium = false;
-                    for (UserInput premiumUser : Database.getInstance().getPremiumUsers()) {
-                        if (premiumUser.getUsername().equals(currentUser.getUsername())) {
-                            premium = true;
-                            break;
-                        }
-                    }
-                    if (!premium) {
-                        adRevenue(action);
-                    }
+                    adRevenue(action);
                     object.put("message", "Ad inserted successfully.");
-                    for (String artist : Database.getInstance().getAdRevenues().keySet()) {
-                        double revenue = Database.getInstance().getAdRevenues().get(artist);
-                        object.put(artist, revenue);
-                    }
-
                     Menu.setOutputs(Menu.getOutputs().add(object));
                     return;
                 }
@@ -70,8 +57,11 @@ public final class AdBreak implements Command {
     }
 
     /**
+     * Processes ad revenue for a specific action, distributing the revenue among artists
+     * based on their songs loaded by a free listener.
+     * Updates the ad revenue records in the database.
      *
-     * @param action
+     * @param action The ActionInput object representing the ad revenue action.
      */
     public void adRevenue(final ActionInput action) {
         for (Listener listener : Database.getInstance().getFreeListeners()) {
@@ -88,7 +78,7 @@ public final class AdBreak implements Command {
                         Database.getInstance().getAdRevenues().put(song.getArtist(), adRevenue);
                     }
                 }
-                // Golește lista de melodii pentru utilizatorul curent
+
                 listener.setSongsloaded(new ArrayList<>());
                 break;
             }

@@ -14,8 +14,13 @@ public final class UpdateRecommendations implements Command {
     }
 
     /**
+     * Processes a user's request to update recommendations based on different recommendation types
+     * If the user exists and is a normal user, updates recommendations based on the specified type
+     * (random_song, random_playlist, or fans_playlist) and generates a success
+     * or no new recommendations message.
+     * If the user is not found or is not a normal user, an appropriate message is provided.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

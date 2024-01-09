@@ -14,6 +14,7 @@ public class BuyMerch implements Command {
     }
 
     /**
+     * Executes the command to add selected merchandise to the user's owned merchandise.
      *
      * @param action The action input containing information necessary for executing the command.
      */

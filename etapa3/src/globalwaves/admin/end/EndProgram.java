@@ -20,7 +20,8 @@ public final class EndProgram {
     }
 
     /**
-     *
+     * Ends the program, generates program results, and adds the results to the outputs.
+     * The results include revenue details, ranking, and the most profitable song for each artist.
      */
     public void endProgram() {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -34,15 +35,14 @@ public final class EndProgram {
                 for (SongInput song : listener.getSongsloaded()) {
                     boolean artistExists = false;
 
-                    // Iterați prin endResults pentru a verifica dacă artistul există deja
                     for (EndProgramResults endProgramResults : endResults) {
                         if (song.getArtist().equals(endProgramResults.getUsername())) {
                             artistExists = true;
-                            break; // Ieșiți din bucla dacă artistul există deja
+                            break;
                         }
                     }
 
-                    // Dacă artistul nu există, adăugați-l în endResults
+                    // If the artist does not exist, add them to endResults
                     if (!artistExists) {
                         endResults.add(new EndProgramResults(song.getArtist()));
                     }
@@ -54,22 +54,20 @@ public final class EndProgram {
                 for (Merch merch : ownedMerch.getOwnedmerchandise()) {
                     boolean artistExists = false;
 
-                    // Iterați prin endResults pentru a verifica dacă artistul există deja
                     for (EndProgramResults endProgramResults : endResults) {
                         if (merch.getUsername().equals(endProgramResults.getUsername())) {
                             artistExists = true;
-                            break; // Ieșiți din bucla dacă artistul există deja
+                            break;
                         }
                     }
 
-                    // Dacă artistul nu există, adăugați-l în endResults
                     if (!artistExists) {
                         endResults.add(new EndProgramResults(merch.getUsername()));
                     }
                 }
             }
         }
-        // Sortați endResults folosind metoda compareTo definită în EndProgramResults
+        // Sort endResults using the compareTo method defined in EndProgramResults
         Collections.sort(endResults);
         for (int i = 0; i < endResults.size(); i++) {
             EndProgramResults result = endResults.get(i);

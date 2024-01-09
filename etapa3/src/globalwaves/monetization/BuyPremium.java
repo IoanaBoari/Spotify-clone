@@ -13,8 +13,12 @@ public final class BuyPremium implements Command {
     }
 
     /**
+     * Processes a user's request to purchase a premium subscription.
+     * If the user exists and is not already a premium subscriber, their status is upgraded,
+     * and a success message is generated.
+     * If the user is not found, an appropriate message is provided.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

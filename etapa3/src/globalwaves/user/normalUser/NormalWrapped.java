@@ -65,8 +65,10 @@ public final class NormalWrapped extends Wrapped {
     }
 
     /**
+     * Updates the top artists, genres, songs, albums, and episodes based on the content
+     * loaded by the given user.
      *
-     * @param currentUser
+     * @param currentUser The user for whom the statistics are updated.
      */
     public void doWrapped(final UserInput currentUser) {
         for (Listener listener : Database.getInstance().getListeners()) {

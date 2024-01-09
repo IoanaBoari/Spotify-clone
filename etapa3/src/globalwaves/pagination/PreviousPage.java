@@ -15,8 +15,14 @@ public final class PreviousPage implements Command {
     }
 
     /**
+     * Processes a user's request to navigate to the previous page.
+     * If the user exists, there are more than one pages to navigate back,
+     * and the user is not on the first page,
+     * updates the user's current page and generates a success message.
+     * If the user is not found, there is only one page, or the user is on the first page,
+     * an appropriate message is provided.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

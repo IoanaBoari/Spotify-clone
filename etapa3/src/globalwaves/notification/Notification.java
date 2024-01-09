@@ -24,9 +24,10 @@ public final class Notification {
     }
 
     /**
+     * Adds a new album notification for a user.
      *
-     * @param username
-     * @param album
+     * @param username The username of the user to receive the notification.
+     * @param album The album for which the notification is generated.
      */
     public void addNotificationAlbum(final String username, final Album album) {
         boolean found = false;
@@ -45,9 +46,10 @@ public final class Notification {
     }
 
     /**
+     * Adds a new merchandise notification for a user.
      *
-     * @param username
-     * @param merch
+     * @param username The username of the user to receive the notification.
+     * @param merch The merchandise for which the notification is generated.
      */
     public void addNotificationMerch(final String username, final Merch merch) {
         boolean found = false;
@@ -66,9 +68,10 @@ public final class Notification {
     }
 
     /**
+     * Adds a new event notification for a user.
      *
-     * @param username
-     * @param event
+     * @param username The username of the user to receive the notification.
+     * @param event The event for which the notification is generated.
      */
     public void addNotificationEvent(final String username, final Event event) {
         boolean found = false;

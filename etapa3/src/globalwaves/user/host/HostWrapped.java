@@ -45,8 +45,9 @@ public final class HostWrapped extends Wrapped {
     }
 
     /**
+     * Updates the top episodes and top fans based on the episodes loaded by the given user.
      *
-     * @param currentUser
+     * @param currentUser The user for whom the statistics are updated.
      */
     public void doWrapped(final UserInput currentUser) {
         for (Listener listener : Database.getInstance().getListeners()) {

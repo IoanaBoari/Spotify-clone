@@ -17,8 +17,12 @@ public final class Subscribe implements Command {
     }
 
     /**
+     * Processes a user's request to subscribe or unsubscribe from an artist or host.
+     * If the user exists, is on a valid page (artist or host),and the subscription status changes,
+     * a success message is generated. If the user is not found or not on a valid page,
+     * an appropriate message is provided.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

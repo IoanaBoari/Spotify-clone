@@ -17,8 +17,10 @@ public final class LoadRecommendations implements Command {
     }
 
     /**
+     * Executes the action to load playback based on user recommendations.
+     * Checks if the user is offline and loads the appropriate recommendation.
      *
-     * @param action The action input containing information necessary for executing the command.
+     * @param action The ActionInput containing information necessary for executing the command.
      */
     public void execute(final ActionInput action) {
         ObjectMapper objectMapper = new ObjectMapper();

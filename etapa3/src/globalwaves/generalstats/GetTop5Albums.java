@@ -48,7 +48,7 @@ public final class GetTop5Albums implements Command {
                 if (likesComparison == 0) {
                     return album1.getName().compareTo(album2.getName());
                 } else {
-                    return likesComparison; // Sortare după totalul de like-uri
+                    return likesComparison;
                 }
             }
         });

@@ -22,9 +22,10 @@ public final class Listener {
         }
 
         /**
+         * Sets the list of loaded songs for the builder.
          *
-         * @param songsloaded
-         * @return
+         * @param songsloaded The list of loaded songs to set.
+         * @return The updated builder instance.
          */
         public Builder songsloaded(final ArrayList<SongInput> songsloaded) {
             this.songsloaded = songsloaded;
@@ -32,9 +33,10 @@ public final class Listener {
         }
 
         /**
+         * Sets the list of loaded episodes for the builder.
          *
-         * @param episodesloaded
-         * @return
+         * @param episodesloaded The list of loaded episodes to set.
+         * @return The updated builder instance.
          */
         public Builder episodesloaded(final ArrayList<EpisodeInput> episodesloaded) {
             this.episodesloaded = episodesloaded;
@@ -42,8 +44,9 @@ public final class Listener {
         }
 
         /**
+         * Builds a new Listener instance based on the provided configuration.
          *
-         * @return
+         * @return A new Listener instance.
          */
         public Listener build() {
             return new Listener(this);
@@ -83,9 +86,14 @@ public final class Listener {
     }
 
     /**
+     * Updates the Listener objects in the database based on the provided ActionInput
+     * and LoadResults. This method handles the addition of loaded songs, episodes, playlists,
+     * and albums to the respective Listener objects.
+     * It considers whether the user is a premium user or not and updates
+     * the appropriate Listener type.
      *
-     * @param action
-     * @param loadResults
+     * @param action      The ActionInput containing information for executing the command.
+     * @param loadResults The LoadResults containing information about the loaded content.
      */
     public static void updateListener(final ActionInput action, final LoadResults loadResults) {
         for (Listener listener : Database.getInstance().getListeners()) {
