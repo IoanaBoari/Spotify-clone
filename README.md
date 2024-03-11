@@ -4,8 +4,9 @@
 
 <div align="center"><img src="https://tenor.com/view/listening-to-music-spongebob-gif-8009182.gif" width="300px"></div>
 
-#### Assignment Link: [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa2](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa1)
-
+#### Assignment Link: [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa1](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa1)
+                      [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa2](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa2)
+                      [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa3](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa3)
 
 ## Skel Structure
 
