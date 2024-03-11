@@ -1,6 +1,6 @@
 # Boari Ioana-Ruxandra 322CD
 
-# Proiect GlobalWaves
+# Proiect GlobalWaves - Spotify Clone
 
 <div align="center"><img src="https://tenor.com/view/listening-to-music-spongebob-gif-8009182.gif" width="300px"></div>
 
